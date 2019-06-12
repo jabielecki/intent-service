@@ -1,0 +1,78 @@
+package logic
+
+import (
+	"github.com/pkg/errors"
+)
+
+{% macro properties(JSONSchema) %}
+{%- for property in JSONSchema.OrderedProperties %}
+    {{ property.GoName }} {{ property.GoType }} `json:"{{ property.JSONTag }}" yaml:"{{ property.ID }}"` {#- TODO use ID as json tag #}
+{%- endfor %}
+{% endmacro %}
+
+{% macro propertiesConstants(JSONSchema, prefix) %}
+const (
+{%- for property in JSONSchema.OrderedProperties %}
+	{%- if property.JSONTag != "-" %}
+	{{ prefix }}Field{{ property.GoName }} = "{{ property.JSONTag }}"
+	{%- endif %}
+{%- endfor %}
+)
+{% endmacro %}
+
+{%- for schema in schemas %}{% if schema.Type == "request" %}
+type {{ schema.JSONSchema.GoName }} struct {
+	baseResource
+	{{- properties(schema.JSONSchema) -}}
+}
+const Kind{{ schema.JSONSchema.GoName }} = "{{schema.ID}}"
+// Names for Fields in {{ schema.JSONSchema.GoName }}
+{{- propertiesConstants(schema.JSONSchema, schema.JSONSchema.GoName) -}}
+
+{% endif %}{% endfor %}
+
+{%- for schema in schemas %}{% if schema.Type == "response" %}
+type {{ schema.JSONSchema.GoName }}Response struct {
+	{{- properties(schema.JSONSchema) -}}
+}
+{{- propertiesConstants(schema.JSONSchema, schema.JSONSchema.GoName|add:"Response") -}}
+{% endif %}{% endfor %}
+
+{%- for schema in schemas %}{% if schema.Type == "object" %}
+type {{ schema.JSONSchema.GoName }} struct {
+	{{- properties(schema.JSONSchema) -}}
+}
+{{- propertiesConstants(schema.JSONSchema, schema.JSONSchema.GoName) -}}
+{% endif %}{% endfor %}
+
+{% for type, definition in types %}{% if definition.Type == "object" %}
+type {{ type }} struct {
+	{{- properties(definition) -}}
+}
+{{- propertiesConstants(definition, type) -}}
+{% endif %}{% endfor %}
+
+
+// MakeResource returns zero value resource
+func MakeResource(id string) (Resource, error) {
+	switch id {
+	{%- for schema in schemas %}{% if schema.Type == "request" %}
+	case "{{ schema.ID }}":
+		return &{{ schema.JSONSchema.GoName }}{}, nil
+    {%- endif%}{% endfor %}
+    default:
+    	return nil, errors.Errorf("resource with id: %s does not exists", id)
+	}
+}
+
+// MakeResponse returns zero value response
+func MakeResponse(id string) (Response, error) {
+	switch id {
+	{%- for schema in schemas %}{% if schema.Type == "response" %}
+	case "{{ schema.ID }}":
+		return &{{ schema.JSONSchema.GoName }}Response{}, nil
+    {%- endif%}{% endfor %}
+    default:
+    	return nil, errors.Errorf("response with id: %s does not exists", id)
+	}
+}

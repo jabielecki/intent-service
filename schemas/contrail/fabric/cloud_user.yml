@@ -1,0 +1,23 @@
+description: Cloud User Details
+extends:
+- base
+id: cloud_user
+metadata:
+  category: cloud
+references:
+  credential:
+    operations: "CRUD"
+    description: "Reference to SSH credential object."
+    presence: "optional"
+plural: cloud_users
+prefix: /
+schema:
+  properties:
+    aws_credential:
+      presence: "optional"
+      description: "AWS Credential Details"
+      $ref: "cloud_types.json#/definitions/AWSCredential"
+  type: object
+singular: cloud_user
+title: Cloud User
+type: ""
