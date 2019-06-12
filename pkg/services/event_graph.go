@@ -1,7 +1,7 @@
 package services
 
 import (
-	"github.com/Juniper/contrail/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
 )
 
 //EventGraph is a directed graph of events.

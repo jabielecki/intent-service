@@ -10,11 +10,11 @@ import (
 	"github.com/labstack/echo"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Juniper/contrail/pkg/errutil"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	servicesmock "github.com/Juniper/contrail/pkg/services/mock"
-	typesmock "github.com/Juniper/contrail/pkg/types/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	servicesmock "github.com/tungstenfabric-preview/intent-service/pkg/services/mock"
+	typesmock "github.com/tungstenfabric-preview/intent-service/pkg/types/mock"
 )
 
 func TestCreateSecurityGroup(t *testing.T) {

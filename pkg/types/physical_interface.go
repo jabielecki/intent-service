@@ -5,10 +5,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Juniper/contrail/pkg/errutil"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/services/baseservices"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services/baseservices"
 )
 
 //CreatePhysicalInterface does pre-check for create physical_interface
@@ -155,7 +155,7 @@ func (sv *ContrailTypeLogicService) validatePhysicalInterfaceESIEqual(
 			if !isEqualVMIRefs(norm[logicalInterface.LogicalInterfaceVlanTag],
 				logicalInterface.VirtualMachineInterfaceRefs) {
 				// return 403 code, implemented "as is"
-				// https://github.com/Juniper/contrail-controller/blob/0e55b227581a7ab1f705734a5bd3e4360ad9a9e5/
+				// https://github.com/tungstenfabric-preview/controller/blob/0e55b227581a7ab1f705734a5bd3e4360ad9a9e5/
 				// src/config/api-server/vnc_cfg_api_server/vnc_cfg_types.py#L5539
 				return errutil.ErrorForbiddenf("LI associated with the PI should have the same VMIs" +
 					" as LIs (associated with the PIs) of the same ESI family")

@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/Juniper/contrail/pkg/format"
+	"github.com/tungstenfabric-preview/intent-service/pkg/format"
 )
 
 type key string

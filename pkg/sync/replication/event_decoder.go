@@ -1,7 +1,7 @@
 package replication
 
 import (
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 // EventDecoder is capable of decoding row data in form of map into an Event.

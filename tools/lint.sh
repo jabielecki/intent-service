@@ -2,7 +2,7 @@
 
 set -o pipefail
 
-ContrailPackage="github.com/Juniper/contrail"
+ContrailPackage="github.com/tungstenfabric-preview/intent-service"
 TOP=$(cd "$(dirname "$0")" && cd ../ && pwd)
 
 function run_go_tool_fix() {

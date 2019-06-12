@@ -10,10 +10,10 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"github.com/Juniper/contrail/pkg/config"
+	"github.com/tungstenfabric-preview/intent-service/pkg/config"
 
-	apicommon "github.com/Juniper/contrail/pkg/apisrv/common"
-	kscommon "github.com/Juniper/contrail/pkg/keystone"
+	apicommon "github.com/tungstenfabric-preview/intent-service/pkg/apisrv/common"
+	kscommon "github.com/tungstenfabric-preview/intent-service/pkg/keystone"
 )
 
 const (

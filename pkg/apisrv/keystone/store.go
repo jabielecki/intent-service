@@ -7,7 +7,7 @@ import (
 
 	uuid "github.com/satori/go.uuid"
 
-	kscommon "github.com/Juniper/contrail/pkg/keystone"
+	kscommon "github.com/tungstenfabric-preview/intent-service/pkg/keystone"
 )
 
 //Store is used to provide a persistence layer for tokens.

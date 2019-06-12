@@ -14,9 +14,9 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 
-	apicommon "github.com/Juniper/contrail/pkg/apisrv/common"
-	auth2 "github.com/Juniper/contrail/pkg/auth"
-	"github.com/Juniper/contrail/pkg/errutil"
+	apicommon "github.com/tungstenfabric-preview/intent-service/pkg/apisrv/common"
+	auth2 "github.com/tungstenfabric-preview/intent-service/pkg/auth"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
 )
 
 const (

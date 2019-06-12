@@ -2,9 +2,9 @@ package services
 
 import (
 	"context"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/apisrv/rbac"
-	"github.com/Juniper/contrail/pkg/auth"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/rbac"
+	"github.com/tungstenfabric-preview/intent-service/pkg/auth"
 )
 
 {% for schema in schemas %}{% if schema.Type != "abstract" and schema.ID %}

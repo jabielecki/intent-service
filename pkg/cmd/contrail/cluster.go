@@ -3,8 +3,8 @@ package contrail
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/Juniper/contrail/pkg/deploy"
-	"github.com/Juniper/contrail/pkg/logutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/deploy"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil"
 )
 
 func init() {

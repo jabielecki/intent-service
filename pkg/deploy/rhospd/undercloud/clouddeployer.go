@@ -10,9 +10,9 @@ import (
 
 	"github.com/flosch/pongo2"
 
-	"github.com/Juniper/contrail/pkg/fileutil"
-	"github.com/Juniper/contrail/pkg/fileutil/template"
-	"github.com/Juniper/contrail/pkg/osutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/fileutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/fileutil/template"
+	"github.com/tungstenfabric-preview/intent-service/pkg/osutil"
 )
 
 const (

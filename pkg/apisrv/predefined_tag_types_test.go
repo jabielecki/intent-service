@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/testutil/integration"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil/integration"
 	"github.com/stretchr/testify/assert"
 )
 

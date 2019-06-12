@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/Juniper/contrail/pkg/cmd/contrailcli"
-	"github.com/Juniper/contrail/pkg/logutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/cmd/contrailcli"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil"
 )
 
 func main() {

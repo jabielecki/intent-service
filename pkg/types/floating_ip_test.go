@@ -10,11 +10,11 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	servicesmock "github.com/Juniper/contrail/pkg/services/mock"
-	"github.com/Juniper/contrail/pkg/types/ipam"
-	ipammock "github.com/Juniper/contrail/pkg/types/ipam/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	servicesmock "github.com/tungstenfabric-preview/intent-service/pkg/services/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/types/ipam"
+	ipammock "github.com/tungstenfabric-preview/intent-service/pkg/types/ipam/mock"
 )
 
 type addrMgrSubnetExhausted int

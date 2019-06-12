@@ -9,13 +9,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Juniper/contrail/pkg/constants"
+	"github.com/tungstenfabric-preview/intent-service/pkg/constants"
 
-	"github.com/Juniper/contrail/pkg/db/etcd"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/testutil/integration"
-	integrationetcd "github.com/Juniper/contrail/pkg/testutil/integration/etcd"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/etcd"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil/integration"
+	integrationetcd "github.com/tungstenfabric-preview/intent-service/pkg/testutil/integration/etcd"
 )
 
 func TestEtcdNotifierService(t *testing.T) {

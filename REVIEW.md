@@ -19,13 +19,13 @@ Imports should be split into 4 groups:
 
 ```go
 "github.com/pkg/errors"
-"github.com/Juniper/contrail"
+"github.com/tungstenfabric-preview/intent-service"
 ```
 
 3. renamed imports: 
-    e.g. `apicommon "github.com/Juniper/contrail/pkg/apisrv/common"`
+    e.g. `apicommon "github.com/tungstenfabric-preview/intent-service/pkg/apisrv/common"`
 4. "_" imports (these should only exist in main or tests)
-    e.g. `_ "github.com/Juniper/contrail/pkg/apisrv/common"`
+    e.g. `_ "github.com/tungstenfabric-preview/intent-service/pkg/apisrv/common"`
 
 
 
@@ -38,10 +38,10 @@ Additionally, each of the groups should be sorted alphabetically -
 -	"fmt"
 -
 -	"net/http"
--	apicommon "github.com/Juniper/contrail/pkg/apisrv/common"
--	"github.com/Juniper/contrail/pkg/models/basemodels"
+-	apicommon "github.com/tungstenfabric-preview/intent-service/pkg/apisrv/common"
+-	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
 -	"github.com/labstack/echo"
--	_ "github.com/Juniper/contrail/pkg/keystone"
+-	_ "github.com/tungstenfabric-preview/intent-service/pkg/keystone"
 -)
 +// Do
 +import (
@@ -49,11 +49,11 @@ Additionally, each of the groups should be sorted alphabetically -
 +	"net/http"
 +
 +	"github.com/labstack/echo"
-+	"github.com/Juniper/contrail/pkg/models/basemodels"
++	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
 +
-+	apicommon "github.com/Juniper/contrail/pkg/apisrv/common"
++	apicommon "github.com/tungstenfabric-preview/intent-service/pkg/apisrv/common"
 +
-+	_ "github.com/Juniper/contrail/pkg/keystone"
++	_ "github.com/tungstenfabric-preview/intent-service/pkg/keystone"
 +)
 ```
 

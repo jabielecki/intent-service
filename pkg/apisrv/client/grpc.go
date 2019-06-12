@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 // GRPC is a GRPC API server client.

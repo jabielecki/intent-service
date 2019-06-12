@@ -3,9 +3,9 @@ package undercloud
 import (
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	"github.com/Juniper/contrail/pkg/deploy/base"
-	"github.com/Juniper/contrail/pkg/logutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	"github.com/tungstenfabric-preview/intent-service/pkg/deploy/base"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil"
 )
 
 // Config represents Command configuration.

@@ -46,7 +46,7 @@ func NewObjPerms(kt *keystone.Token) ObjectPerms {
 	}
 
 	// nolint: lll
-	// TODO: implement rest of logic: https://github.com/Juniper/contrail-controller/blob/691559e3cbfa9d9db227b4ee55f7eced141c4498/src/config/api-server/vnc_cfg_api_server/vnc_cfg_api_server.py#L2332
+	// TODO: implement rest of logic: https://github.com/tungstenfabric-preview/controller/blob/691559e3cbfa9d9db227b4ee55f7eced141c4498/src/config/api-server/vnc_cfg_api_server/vnc_cfg_api_server.py#L2332
 	objPerms := ObjectPerms{
 		//  part of parameters are set while creating Context in NewContext() method
 		TokenInfo: struct {

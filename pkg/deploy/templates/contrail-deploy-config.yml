@@ -19,6 +19,6 @@ template_root: /usr/share/contrail/templates/
 
 # Optional ansible params for dev/test
 #ansible_sudo_pass: secret123
-#ansible_fetch_url: https://review.opencontrail.org/Juniper/contrail-ansible-deployer refs/changes/80/40780/20
+#ansible_fetch_url: https://github.com/tungstenfabric-tools-preview/ansible-deployer refs/changes/80/40780/20
 #ansible_cherry_pick_revision: FETCH_HEAD
 #ansible_deployer_revision: GIT_COMMIT_HASH

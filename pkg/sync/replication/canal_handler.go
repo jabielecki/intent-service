@@ -11,8 +11,8 @@ import (
 	"github.com/siddontang/go-mysql/schema"
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/logutil"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 // CanalHandler handles canal events by decoding them as events and passing them to processor.

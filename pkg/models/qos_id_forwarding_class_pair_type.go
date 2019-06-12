@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/Juniper/contrail/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
 )
 
 // CheckKeyDscp checks if QosIdForwardingClassPair as DSCP key is valid.

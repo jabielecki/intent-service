@@ -5,7 +5,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 const (

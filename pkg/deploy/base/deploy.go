@@ -3,7 +3,7 @@ package base
 import (
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/logutil/report"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil/report"
 )
 
 // Deployer interface

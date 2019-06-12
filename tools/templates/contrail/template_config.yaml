@@ -43,9 +43,9 @@
 - type: all
   template_path: pkg/services/list_response_encoding.go.tmpl
 - type: all
-  template_path: proto/github.com/Juniper/contrail/pkg/models/model.proto.tmpl
+  template_path: proto/github.com/tungstenfabric-preview/intent-service/pkg/models/model.proto.tmpl
 - type: all
-  template_path: proto/github.com/Juniper/contrail/pkg/services/service.proto.tmpl
+  template_path: proto/github.com/tungstenfabric-preview/intent-service/pkg/services/service.proto.tmpl
 - type: all
   template_path: pkg/apisrv/client/client_http.go.tmpl
 - type: all

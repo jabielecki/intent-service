@@ -9,9 +9,9 @@ import (
     uuid "github.com/satori/go.uuid"
     "github.com/stretchr/testify/assert"
 
-    "github.com/Juniper/contrail/pkg/models"
-    "github.com/Juniper/contrail/pkg/services"
-    "github.com/Juniper/contrail/pkg/services/baseservices"
+    "github.com/tungstenfabric-preview/intent-service/pkg/models"
+    "github.com/tungstenfabric-preview/intent-service/pkg/services"
+    "github.com/tungstenfabric-preview/intent-service/pkg/services/baseservices"
 )
 
 {% for schema in schemas %}{% if schema.Type != "abstract" and schema.ID %}

@@ -28,11 +28,11 @@ server:
   address: ":9091"
   tls:
     enabled: true
-    key_file: /root/go/src/github.com/Juniper/contrail/tools/server.key
-    cert_file: /root/go/src/github.com/Juniper/contrail/tools/server.crt
+    key_file: /root/go/src/github.com/tungstenfabric-preview/intent-service/tools/server.key
+    cert_file: /root/go/src/github.com/tungstenfabric-preview/intent-service/tools/server.crt
   enable_grpc: false
   static_files:
-    /: /root/go/src/github.com/Juniper/contrail/public
+    /: /root/go/src/github.com/tungstenfabric-preview/intent-service/public
   notify_etcd: false
 
 keystone:

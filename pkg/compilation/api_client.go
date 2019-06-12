@@ -1,9 +1,9 @@
 package compilation
 
 import (
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	"github.com/Juniper/contrail/pkg/compilation/config"
-	"github.com/Juniper/contrail/pkg/keystone"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/config"
+	"github.com/tungstenfabric-preview/intent-service/pkg/keystone"
 )
 
 func newAPIClient(config config.Config) *client.HTTP {

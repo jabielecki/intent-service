@@ -7,8 +7,8 @@ import (
 	"github.com/kyleconroy/pgoutput"
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/logutil"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 // PgoutputHandler handles replication messages by decoding them as events and passing them to processor.

@@ -42,6 +42,6 @@
   become_user: root
 
 - name: Create test environment
-  command: "chdir={{ sourcedir }}/src/github.com/Juniper/contrail make testenv"
+  command: "chdir={{ sourcedir }}/src/github.com/tungstenfabric-preview/intent-service make testenv"
   become: yes
   become_user: root

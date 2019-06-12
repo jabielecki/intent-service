@@ -8,7 +8,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
 )
 
 // Reporter reports provisioing status and log

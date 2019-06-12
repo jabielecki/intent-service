@@ -12,7 +12,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Juniper/contrail/pkg/collector"
+	"github.com/tungstenfabric-preview/intent-service/pkg/collector"
 	"github.com/pkg/errors"
 )
 

@@ -12,11 +12,11 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	"github.com/Juniper/contrail/pkg/config"
-	"github.com/Juniper/contrail/pkg/keystone"
-	"github.com/Juniper/contrail/pkg/logutil"
-	"github.com/Juniper/contrail/pkg/schema"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	"github.com/tungstenfabric-preview/intent-service/pkg/config"
+	"github.com/tungstenfabric-preview/intent-service/pkg/keystone"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/schema"
 )
 
 // Agent constants.
@@ -154,7 +154,7 @@ func buildSchemaMapping(schemas []*schema.Schema) map[string]*schema.Schema {
 	s := make(map[string]*schema.Schema)
 	for _, schema := range schemas {
 		// Compensate for empty Path and PluralPath fields in schema
-		// TODO(daniel): remove this after following issue is fixed: https://github.com/Juniper/contrail/issues/72
+		// TODO(daniel): remove this after following issue is fixed: https://github.com/tungstenfabric-preview/intent-service/issues/72
 		schema.Path = path.Join(schema.Prefix, strings.Replace(schema.ID, "_", "-", -1))
 		schema.PluralPath = path.Join(schema.Prefix, strings.Replace(schema.Plural, "_", "-", -1))
 		s[schema.ID] = schema

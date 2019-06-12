@@ -3,7 +3,7 @@ package osutil
 import (
 	"os/exec"
 
-	"github.com/Juniper/contrail/pkg/logutil/report"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil/report"
 )
 
 // ExecAndWait execs cmd, reports the stdout & stderr and waits for cmd to complete

@@ -3,9 +3,9 @@ package services
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/auth"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services/baseservices"
+	"github.com/tungstenfabric-preview/intent-service/pkg/auth"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services/baseservices"
 )
 
 func (service *RBACService) getAllAPIAccessLists(ctx context.Context) []*models.APIAccessList {

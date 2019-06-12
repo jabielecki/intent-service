@@ -10,12 +10,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Juniper/contrail/pkg/constants"
+	"github.com/tungstenfabric-preview/intent-service/pkg/constants"
 
-	"github.com/Juniper/contrail/pkg/compilation"
-	"github.com/Juniper/contrail/pkg/compilation/watch"
-	"github.com/Juniper/contrail/pkg/db/etcd"
-	integrationetcd "github.com/Juniper/contrail/pkg/testutil/integration/etcd"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/watch"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/etcd"
+	integrationetcd "github.com/tungstenfabric-preview/intent-service/pkg/testutil/integration/etcd"
 )
 
 const (

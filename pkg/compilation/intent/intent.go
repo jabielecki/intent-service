@@ -3,8 +3,8 @@ package intent
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/models/basemodels"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 // EvaluateContext contains context information for Resource to handle CRUD

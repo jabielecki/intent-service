@@ -49,12 +49,12 @@ deployment:
 
 ## Deployment
 
-- On remote (target) machine clone [Contrail repository](https://github.com/Juniper/contrail) into $HOME/go/src/github.com/Juniper
+- On remote (target) machine clone [Contrail repository](https://github.com/tungstenfabric-preview/intent-service) into $HOME/go/src/github.com/Juniper
 
   ```bash
   mkdir -p $HOME/go/src/github.com/Juniper
   cd !$
-  git clone https://github.com/Juniper/contrail
+  git clone https://github.com/tungstenfabric-preview/intent-service
   ```
 
 - Run a deployment script

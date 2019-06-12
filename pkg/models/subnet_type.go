@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/Juniper/contrail/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
 )
 
 // CIDR returns classless inter-domain routing of a subnet.

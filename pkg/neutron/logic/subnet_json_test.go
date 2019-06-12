@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Juniper/contrail/pkg/format"
+	"github.com/tungstenfabric-preview/intent-service/pkg/format"
 )
 
 func TestSubnet_UnmarshalJSON(t *testing.T) {

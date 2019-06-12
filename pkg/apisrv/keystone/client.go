@@ -14,7 +14,7 @@ import (
 	"github.com/databus23/keystone"
 	"github.com/labstack/echo"
 
-	kscommon "github.com/Juniper/contrail/pkg/keystone"
+	kscommon "github.com/tungstenfabric-preview/intent-service/pkg/keystone"
 )
 
 const (

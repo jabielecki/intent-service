@@ -3,10 +3,10 @@ package integration
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/constants"
-	"github.com/Juniper/contrail/pkg/db/cache"
-	"github.com/Juniper/contrail/pkg/db/etcd"
-	integrationetcd "github.com/Juniper/contrail/pkg/testutil/integration/etcd"
+	"github.com/tungstenfabric-preview/intent-service/pkg/constants"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/cache"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/etcd"
+	integrationetcd "github.com/tungstenfabric-preview/intent-service/pkg/testutil/integration/etcd"
 )
 
 const (

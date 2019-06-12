@@ -3,8 +3,8 @@ package types
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/errutil"
-	"github.com/Juniper/contrail/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
 )
 
 // complementRefs checks if to fields in resource refs are filled

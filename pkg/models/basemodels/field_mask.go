@@ -6,7 +6,7 @@ import (
 
 	"github.com/gogo/protobuf/types"
 
-	"github.com/Juniper/contrail/pkg/format"
+	"github.com/tungstenfabric-preview/intent-service/pkg/format"
 )
 
 // MapToFieldMask returns updated fields masks.

@@ -3,7 +3,7 @@ package models
 import (
 	"fmt"
 
-	"github.com/Juniper/contrail/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
 )
 
 func uuidToMac(uuid string) (mac string, err error) {

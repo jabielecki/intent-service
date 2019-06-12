@@ -3,7 +3,7 @@ package baseservices
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
 )
 
 //MetadataGetter provides getter for metadata.

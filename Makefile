@@ -87,7 +87,7 @@ $(foreach mock,$(MOCKS),$(eval $(call create-generate-mock-target,$(mock))))
 generate_mocks: $(MOCKS)
 
 PROTO := ./bin/protoc -I ./vendor/ -I ./vendor/github.com/gogo/protobuf/protobuf -I ./proto
-PROTO_PKG_PATH := proto/github.com/Juniper/contrail/pkg
+PROTO_PKG_PATH := proto/github.com/tungstenfabric-preview/intent-service/pkg
 
 pkg/%.pb.go: $(PROTO_PKG_PATH)/%.proto
 	$(PROTO) --gogofaster_out=Mgoogle/protobuf/field_mask.proto=github.com/gogo/protobuf/types,\
@@ -193,7 +193,7 @@ help: ## Display help message
 $(CONTRAIL_OPENAPI_PATH):
 	$(MAKE) generate_go
 
-DOCKER_GO_SRC_DIR := /go/src/github.com/Juniper/contrail
+DOCKER_GO_SRC_DIR := /go/src/github.com/tungstenfabric-preview/intent-service
 $(CONTRAIL_APIDOC_PATH): $(CONTRAIL_OPENAPI_PATH)
 ifeq (, $(shell which spectacle))
 	$(info No spectacle in $(PATH) consider installing it. Running in docker.)

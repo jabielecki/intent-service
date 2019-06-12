@@ -1,6 +1,6 @@
 ---
-workdir: /go/src/github.com/Juniper/contrail
+workdir: /go/src/github.com/tungstenfabric-preview/intent-service
 sourcedir: "{{ ansible_env.HOME }}"
 logsdir: "{{ ansible_env.HOME }}/unittests-logs"
-contraildir: "{{ ansible_env.HOME }}/src/github.com/Juniper/contrail"
+contraildir: "{{ ansible_env.HOME }}/src/github.com/tungstenfabric-preview/intent-service"
 repository: contrail-base
