@@ -5,11 +5,11 @@ import (
 
 	"github.com/golang/mock/gomock"
 
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/services/mock"
-	"github.com/Juniper/contrail/pkg/types/ipam/mock"
-	"github.com/Juniper/contrail/pkg/types/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/types/ipam/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/types/mock"
 )
 
 func makeMockedContrailTypeLogicService(controller *gomock.Controller) *ContrailTypeLogicService {

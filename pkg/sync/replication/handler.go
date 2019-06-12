@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	pkglog "github.com/Juniper/contrail/pkg/log"
+	pkglog "github.com/tungstenfabric-preview/intent-service/pkg/log"
 	"github.com/kyleconroy/pgoutput"
 	"github.com/siddontang/go-mysql/canal"
 	"github.com/siddontang/go-mysql/mysql"

@@ -3,8 +3,8 @@ package sink
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/db"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 // EventProcessorSink is a Sink that dispatches events to processor.

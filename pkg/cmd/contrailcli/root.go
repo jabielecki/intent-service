@@ -7,9 +7,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	"github.com/Juniper/contrail/pkg/common"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 var configFile string

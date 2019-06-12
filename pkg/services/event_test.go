@@ -8,8 +8,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/yaml.v2"
 
-	"github.com/Juniper/contrail/pkg/common"
-	"github.com/Juniper/contrail/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
 )
 
 func TestCreateEventJSONEncoding(t *testing.T) {

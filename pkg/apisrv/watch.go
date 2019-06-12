@@ -3,7 +3,7 @@ package apisrv
 import (
 	"encoding/json"
 
-	"github.com/Juniper/contrail/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
 	"github.com/labstack/echo"
 	"golang.org/x/net/websocket"
 )

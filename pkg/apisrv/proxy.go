@@ -16,10 +16,10 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	apicommon "github.com/Juniper/contrail/pkg/apisrv/common"
-	"github.com/Juniper/contrail/pkg/common"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
+	apicommon "github.com/tungstenfabric-preview/intent-service/pkg/apisrv/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 const (

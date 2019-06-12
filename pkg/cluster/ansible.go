@@ -12,7 +12,7 @@ import (
 	shellwords "github.com/mattn/go-shellwords"
 	"github.com/siddontang/go/log"
 
-	"github.com/Juniper/contrail/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
 )
 
 const (

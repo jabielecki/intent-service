@@ -3,10 +3,10 @@ package types
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/common"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/types/ipam"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/types/ipam"
 )
 
 //CreateInstanceIP does pre-check for instance-ip

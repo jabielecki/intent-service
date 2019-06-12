@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Juniper/contrail/pkg/cmd/contrailcli"
+	"github.com/tungstenfabric-preview/intent-service/pkg/cmd/contrailcli"
 	log "github.com/sirupsen/logrus"
 )
 

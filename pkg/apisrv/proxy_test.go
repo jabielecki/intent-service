@@ -12,7 +12,7 @@ import (
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Juniper/contrail/pkg/testutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil"
 )
 
 const (

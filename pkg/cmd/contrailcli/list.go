@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v2"
 
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 var (

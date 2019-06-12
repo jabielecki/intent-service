@@ -13,7 +13,7 @@ import (
 	"github.com/labstack/echo"
 	"google.golang.org/grpc"
 
-	"github.com/Juniper/contrail/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
 )
 
 func removePathPrefixMiddleware(prefix string) echo.MiddlewareFunc {

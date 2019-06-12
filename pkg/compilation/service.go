@@ -17,12 +17,12 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/compilation/config"
-	"github.com/Juniper/contrail/pkg/compilation/watch"
-	"github.com/Juniper/contrail/pkg/compilationif"
-	"github.com/Juniper/contrail/pkg/db/etcd"
-	"github.com/Juniper/contrail/pkg/log"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/config"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/watch"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilationif"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/etcd"
+	"github.com/tungstenfabric-preview/intent-service/pkg/log"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 // setupService setups all required services and chains them.

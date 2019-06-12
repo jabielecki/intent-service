@@ -10,9 +10,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/db"
-	pkglog "github.com/Juniper/contrail/pkg/log"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db"
+	pkglog "github.com/tungstenfabric-preview/intent-service/pkg/log"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 type abstractCanal interface {

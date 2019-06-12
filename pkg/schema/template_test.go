@@ -4,7 +4,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Juniper/contrail/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
 	"github.com/stretchr/testify/assert"
 )
 

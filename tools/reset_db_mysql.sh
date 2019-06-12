@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TOP=/go/src/github.com/Juniper/contrail/tools
+TOP=/go/src/github.com/tungstenfabric-preview/intent-service/tools
 
 echo "Mounts:"
 docker inspect -f '{{ range $i, $m := .Mounts }}{{ $m.Source }}:{{ $m.Destination }}{{"\n"}}{{end}}' contrail_mysql

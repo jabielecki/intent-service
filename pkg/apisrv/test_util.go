@@ -16,12 +16,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/yaml.v2"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	apicommon "github.com/Juniper/contrail/pkg/apisrv/common"
-	"github.com/Juniper/contrail/pkg/apisrv/keystone"
-	"github.com/Juniper/contrail/pkg/common"
-	kscommon "github.com/Juniper/contrail/pkg/keystone"
-	"github.com/Juniper/contrail/pkg/testutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	apicommon "github.com/tungstenfabric-preview/intent-service/pkg/apisrv/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/keystone"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
+	kscommon "github.com/tungstenfabric-preview/intent-service/pkg/keystone"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil"
 	log "github.com/sirupsen/logrus"
 )
 

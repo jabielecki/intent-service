@@ -11,10 +11,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	pkglog "github.com/Juniper/contrail/pkg/log"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	pkglog "github.com/tungstenfabric-preview/intent-service/pkg/log"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 // Resource constants

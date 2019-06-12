@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build-job:
-    working_directory: /go/src/github.com/Juniper/contrail
+    working_directory: /go/src/github.com/tungstenfabric-preview/intent-service
     docker:
       - image: circleci/golang:1.9.2
       - image: circleci/mysql:5.7
@@ -36,7 +36,7 @@ jobs:
       - image: circleci/mysql:5.7
         environment:
           - MYSQL_ROOT_PASSWORD=contrail123
-    working_directory: /go/src/github.com/Juniper/contrail
+    working_directory: /go/src/github.com/tungstenfabric-preview/intent-service
     steps:
     - checkout
     - run:

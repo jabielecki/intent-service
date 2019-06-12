@@ -8,10 +8,10 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 
-	"github.com/Juniper/contrail/pkg/common"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/types/ipam"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/types/ipam"
 	"github.com/gogo/protobuf/types"
 )
 
@@ -619,7 +619,7 @@ func (sv *ContrailTypeLogicService) validateSubnetChanges(
 				newDefaultGW := newIpamSubnet.GetDefaultGateway()
 				// python code does it that way but not sure if this logic is exactly what we want
 				//nolint: lll
-				// https://github.com/Juniper/contrail-controller/blob/d9d8fdfb/src/config/api-server/vnc_cfg_api_server/vnc_addr_mgmt.py#L2291
+				// https://github.com/tungstenfabric-preview/controller/blob/d9d8fdfb/src/config/api-server/vnc_cfg_api_server/vnc_addr_mgmt.py#L2291
 				if newDefaultGW != "" && newDefaultGW != oldIpamSubnet.GetDefaultGateway() {
 					return errors.Errorf("Cannot change default gateway")
 				}

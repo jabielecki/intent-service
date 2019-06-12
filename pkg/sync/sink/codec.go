@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"path"
 
-	"github.com/Juniper/contrail/pkg/db"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db"
 	"github.com/gogo/protobuf/proto"
 	"github.com/imdario/mergo"
 )

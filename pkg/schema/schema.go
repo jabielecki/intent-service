@@ -12,7 +12,7 @@ import (
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v2"
 
-	"github.com/Juniper/contrail/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
 )
 
 //Version is version for schema format.

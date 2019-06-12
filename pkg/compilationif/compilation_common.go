@@ -6,8 +6,8 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/db/etcd"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/etcd"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 // NewCompilationService makes a compilation service.

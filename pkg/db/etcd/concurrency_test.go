@@ -6,10 +6,10 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/Juniper/contrail/pkg/testutil/integration"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil/integration"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Juniper/contrail/pkg/db/etcd"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/etcd"
 )
 
 const (

@@ -9,10 +9,10 @@ import (
 	"github.com/sirupsen/logrus"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	"github.com/Juniper/contrail/pkg/common"
-	pkglog "github.com/Juniper/contrail/pkg/log"
-	"github.com/Juniper/contrail/pkg/log/report"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
+	pkglog "github.com/tungstenfabric-preview/intent-service/pkg/log"
+	"github.com/tungstenfabric-preview/intent-service/pkg/log/report"
 )
 
 // Config represents cloud configuration needed by cloudManager

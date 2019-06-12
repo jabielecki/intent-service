@@ -5,7 +5,7 @@ import (
 	"net"
 	"strconv"
 
-	"github.com/Juniper/contrail/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
 	"github.com/pkg/errors"
 	"github.com/twinj/uuid"
 )

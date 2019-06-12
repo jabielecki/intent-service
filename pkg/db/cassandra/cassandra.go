@@ -11,8 +11,8 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/streadway/amqp"
 
-	pkglog "github.com/Juniper/contrail/pkg/log"
-	"github.com/Juniper/contrail/pkg/services"
+	pkglog "github.com/tungstenfabric-preview/intent-service/pkg/log"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 const (

@@ -6,9 +6,9 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 
-	"github.com/Juniper/contrail/pkg/apisrv"
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	"github.com/Juniper/contrail/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
 )
 
 var inputPath string

@@ -12,9 +12,9 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Juniper/contrail/pkg/db"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/testutil/integration"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil/integration"
 )
 
 func TestSyncSynchronizesExistingPostgresDataToEtcd(t *testing.T) {

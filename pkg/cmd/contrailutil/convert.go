@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Juniper/contrail/pkg/db"
-	"github.com/Juniper/contrail/pkg/db/cassandra"
-	etcdclient "github.com/Juniper/contrail/pkg/db/etcd"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/cassandra"
+	etcdclient "github.com/tungstenfabric-preview/intent-service/pkg/db/etcd"
 
-	"github.com/Juniper/contrail/pkg/common"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"

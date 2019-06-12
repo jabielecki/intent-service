@@ -14,17 +14,17 @@ import (
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	apicommon "github.com/Juniper/contrail/pkg/apisrv/common"
-	"github.com/Juniper/contrail/pkg/apisrv/discovery"
-	"github.com/Juniper/contrail/pkg/apisrv/keystone"
-	"github.com/Juniper/contrail/pkg/common"
-	"github.com/Juniper/contrail/pkg/db"
-	"github.com/Juniper/contrail/pkg/db/cache"
-	etcdclient "github.com/Juniper/contrail/pkg/db/etcd"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/types"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	apicommon "github.com/tungstenfabric-preview/intent-service/pkg/apisrv/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/discovery"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/keystone"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/cache"
+	etcdclient "github.com/tungstenfabric-preview/intent-service/pkg/db/etcd"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/types"
 )
 
 //Server represents Intent API Server.

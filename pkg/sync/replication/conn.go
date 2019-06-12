@@ -7,8 +7,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/Juniper/contrail/pkg/db"
-	pkglog "github.com/Juniper/contrail/pkg/log"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db"
+	pkglog "github.com/tungstenfabric-preview/intent-service/pkg/log"
 	"github.com/jackc/pgx"
 	"github.com/sirupsen/logrus"
 )

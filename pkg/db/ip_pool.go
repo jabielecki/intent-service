@@ -7,7 +7,7 @@ import (
 	"net"
 	"strings"
 
-	"github.com/Juniper/contrail/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
 	"github.com/apparentlymart/go-cidr/cidr"
 	"github.com/pkg/errors"
 )

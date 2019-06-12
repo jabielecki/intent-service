@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Juniper/contrail/pkg/types/ipam"
+	"github.com/tungstenfabric-preview/intent-service/pkg/types/ipam"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/Juniper/contrail/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
 )
 
 // Virtual network forwarding modes.

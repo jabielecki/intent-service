@@ -6,14 +6,14 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/Juniper/contrail/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
 	"github.com/databus23/keystone"
 	"github.com/labstack/echo"
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 
-	apicommon "github.com/Juniper/contrail/pkg/apisrv/common"
+	apicommon "github.com/tungstenfabric-preview/intent-service/pkg/apisrv/common"
 	log "github.com/sirupsen/logrus"
 )
 

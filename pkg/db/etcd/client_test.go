@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/Juniper/contrail/pkg/log"
+	"github.com/tungstenfabric-preview/intent-service/pkg/log"
 	"github.com/stretchr/testify/assert"
 )
 

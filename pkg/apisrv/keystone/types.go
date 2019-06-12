@@ -1,7 +1,7 @@
 package keystone
 
 import (
-	types "github.com/Juniper/contrail/pkg/keystone"
+	types "github.com/tungstenfabric-preview/intent-service/pkg/keystone"
 )
 
 //ProjectListResponse represents a project list response.

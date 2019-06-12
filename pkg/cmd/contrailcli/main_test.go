@@ -5,11 +5,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/Juniper/contrail/pkg/testutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil"
 	"github.com/spf13/viper"
 
-	"github.com/Juniper/contrail/pkg/apisrv"
-	"github.com/Juniper/contrail/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
 	_ "github.com/go-sql-driver/mysql"
 	log "github.com/sirupsen/logrus"
 )

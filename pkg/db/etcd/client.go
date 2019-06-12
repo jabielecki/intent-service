@@ -14,7 +14,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/Juniper/contrail/pkg/log"
+	"github.com/tungstenfabric-preview/intent-service/pkg/log"
 	"github.com/coreos/etcd/clientv3"
 	conc "github.com/coreos/etcd/clientv3/concurrency"
 	"github.com/pkg/errors"

@@ -1,12 +1,12 @@
 - hosts: builder
-  name: Build and test Juniper/contrail
+  name: Build and test tungstenfabric-preview/intent-service
   roles:
     - zuul-include-vars # include variables exported from trusted context
     - install-docker-daemon
     - role: add-insecure-registry
       new_registry: "{{ contrail_docker_registry }}"
   vars:
-    workdir: /go/src/github.com/Juniper/contrail
+    workdir: /go/src/github.com/tungstenfabric-preview/intent-service
     sourcedir: "{{ ansible_env.HOME }}"
   tasks:
     - include: build-setup.yaml

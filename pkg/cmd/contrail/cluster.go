@@ -1,7 +1,7 @@
 package contrail
 
 import (
-	"github.com/Juniper/contrail/pkg/cluster"
+	"github.com/tungstenfabric-preview/intent-service/pkg/cluster"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

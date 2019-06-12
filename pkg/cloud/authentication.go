@@ -7,10 +7,10 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/common"
-	pkglog "github.com/Juniper/contrail/pkg/log"
-	"github.com/Juniper/contrail/pkg/log/report"
-	"github.com/Juniper/contrail/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
+	pkglog "github.com/tungstenfabric-preview/intent-service/pkg/log"
+	"github.com/tungstenfabric-preview/intent-service/pkg/log/report"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
 )
 
 type azureUser struct {

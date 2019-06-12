@@ -3,7 +3,7 @@ package sink
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/db"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db"
 )
 
 // Sink represents service that handler transfers data to.

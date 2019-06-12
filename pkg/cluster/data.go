@@ -1,8 +1,8 @@
 package cluster
 
 import (
-	"github.com/Juniper/contrail/pkg/cloud"
-	"github.com/Juniper/contrail/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/cloud"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
 )
 
 // DataStore interface to store cluster data

@@ -5,7 +5,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
 )
 
 // QuotaCheckerCounter implements counting logic for specific resources in given project.

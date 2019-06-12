@@ -3,7 +3,7 @@ package common
 import (
 	"os/exec"
 
-	"github.com/Juniper/contrail/pkg/log/report"
+	"github.com/tungstenfabric-preview/intent-service/pkg/log/report"
 )
 
 // ExecCmdAndWait execs cmd, reports the stdout & stderr and waits for cmd to complete

@@ -11,12 +11,12 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/Juniper/contrail/pkg/common"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/services/mock"
-	"github.com/Juniper/contrail/pkg/types/ipam"
-	"github.com/Juniper/contrail/pkg/types/ipam/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/common"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/types/ipam"
+	"github.com/tungstenfabric-preview/intent-service/pkg/types/ipam/mock"
 )
 
 func instanceIPPrepareVirtualNetwork(s *ContrailTypeLogicService) {

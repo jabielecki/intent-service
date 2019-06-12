@@ -17,12 +17,12 @@ import (
 	"github.com/spf13/viper"
 	"google.golang.org/grpc/grpclog"
 
-	"github.com/Juniper/contrail/pkg/db"
-	"github.com/Juniper/contrail/pkg/db/etcd"
-	"github.com/Juniper/contrail/pkg/log"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/sync/replication"
-	"github.com/Juniper/contrail/pkg/sync/sink"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/etcd"
+	"github.com/tungstenfabric-preview/intent-service/pkg/log"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/sync/replication"
+	"github.com/tungstenfabric-preview/intent-service/pkg/sync/sink"
 )
 
 const (

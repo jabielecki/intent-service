@@ -13,7 +13,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	pkglog "github.com/Juniper/contrail/pkg/log"
+	pkglog "github.com/tungstenfabric-preview/intent-service/pkg/log"
 )
 
 // Integration test settings.

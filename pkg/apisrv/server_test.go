@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 	"github.com/stretchr/testify/assert"
 	"github.com/twinj/uuid"
 	"google.golang.org/grpc"

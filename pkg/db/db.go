@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/ExpansiveWorlds/instrumentedsql"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 	"github.com/go-sql-driver/mysql"
 	"github.com/gogo/protobuf/proto"
 	"github.com/lib/pq"

@@ -9,13 +9,13 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/Juniper/contrail/pkg/agent"
-	"github.com/Juniper/contrail/pkg/apisrv"
-	"github.com/Juniper/contrail/pkg/compilation"
-	"github.com/Juniper/contrail/pkg/db/cache"
-	"github.com/Juniper/contrail/pkg/db/cassandra"
-	"github.com/Juniper/contrail/pkg/db/etcd"
-	syncp "github.com/Juniper/contrail/pkg/sync"
+	"github.com/tungstenfabric-preview/intent-service/pkg/agent"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/cache"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/cassandra"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/etcd"
+	syncp "github.com/tungstenfabric-preview/intent-service/pkg/sync"
 )
 
 var cacheDB *cache.DB

@@ -1,6 +1,6 @@
 package models
 
-import "github.com/Juniper/contrail/pkg/common"
+import "github.com/tungstenfabric-preview/intent-service/pkg/common"
 
 // IsParentTypeVirtualNetwork checks if parent's type is virtual network
 func (fipp *FloatingIPPool) IsParentTypeVirtualNetwork() bool {

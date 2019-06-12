@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/yaml.v2"
 
-	"github.com/Juniper/contrail/pkg/testutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil"
 )
 
 const (

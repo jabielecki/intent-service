@@ -1,7 +1,7 @@
 FROM centos:7.4.1708
 MAINTAINER Nachi Ueno nueno@juniper.net
 
-COPY ./contrail /go/src/github.com/Juniper/contrail
+COPY ./contrail /go/src/github.com/tungstenfabric-preview/intent-service
 ADD ./contrail /bin/contrail
 ADD ./contrailcli /bin/contrailcli
 ADD ./contrailutil /bin/contrailutil

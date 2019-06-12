@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	kscommon "github.com/Juniper/contrail/pkg/keystone"
+	kscommon "github.com/tungstenfabric-preview/intent-service/pkg/keystone"
 	uuid "github.com/satori/go.uuid"
 )
 

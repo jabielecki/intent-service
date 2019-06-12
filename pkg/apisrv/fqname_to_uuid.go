@@ -5,7 +5,7 @@ import (
 
 	"net/http"
 
-	"github.com/Juniper/contrail/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
 	"github.com/labstack/echo"
 )
 

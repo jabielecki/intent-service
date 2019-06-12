@@ -8,9 +8,9 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	pkglog "github.com/Juniper/contrail/pkg/log"
-	"github.com/Juniper/contrail/pkg/log/report"
-	"github.com/Juniper/contrail/pkg/models"
+	pkglog "github.com/tungstenfabric-preview/intent-service/pkg/log"
+	"github.com/tungstenfabric-preview/intent-service/pkg/log/report"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
 )
 
 type provisioner interface {

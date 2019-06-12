@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/Juniper/contrail/pkg/db"
-	"github.com/Juniper/contrail/pkg/sync/sink"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db"
+	"github.com/tungstenfabric-preview/intent-service/pkg/sync/sink"
 )
 
 // RowSink is data consumer capable of processing row data.

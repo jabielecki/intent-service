@@ -9,10 +9,10 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/services/mock"
-	"github.com/Juniper/contrail/pkg/types/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/types/mock"
 )
 
 func TestGlobalSystemConfigUdc(t *testing.T) {

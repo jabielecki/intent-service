@@ -26,10 +26,10 @@ to community discussion.
 ### Step2. Go get contrail
 
 ``` shell
-go get -u github.com/Juniper/contrail
+go get -u github.com/tungstenfabric-preview/intent-service
 ```
 
-Note that `go get -u github.com/Juniper/contrail/cmd/contrailutil` fails because we don't
+Note that `go get -u github.com/tungstenfabric-preview/intent-service/cmd/contrailutil` fails because we don't
 commit generated code.
 
 ### Step3. Install dependencies
@@ -103,7 +103,7 @@ for more info.
 ## Schema Files
 
 Note that schema stored here is just a cache for helping development.
-Developers should make sure download latest schema from http://github.com/Juniper/contrail-api-client
+Developers should make sure download latest schema from http://github.com/tungstenfabric-preview/api-client
 
 JSON version stored in public/schema.json
 
@@ -151,7 +151,7 @@ contrail <command> -h
 
 API Server supports Keystone V3 authentication and RBAC.
 API Server has minimal Keystone API V3 support for standalone use case.
-See a configuration [example](https://github.com/Juniper/contrail/blob/master/sample/contrail.yml#L61)
+See a configuration [example](https://github.com/tungstenfabric-preview/intent-service/blob/master/sample/contrail.yml#L61)
 
 ## How to contribute
 

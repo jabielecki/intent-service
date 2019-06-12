@@ -3,8 +3,8 @@ package sync
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/log"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/log"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 	"github.com/sirupsen/logrus"
 )
 

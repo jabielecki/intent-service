@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	etcdlock "github.com/DavidCai1993/etcd-lock"
-	pkglog "github.com/Juniper/contrail/pkg/log"
+	pkglog "github.com/tungstenfabric-preview/intent-service/pkg/log"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"

@@ -11,11 +11,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Juniper/contrail/pkg/apisrv"
-	"github.com/Juniper/contrail/pkg/apisrv/keystone"
-	kscommon "github.com/Juniper/contrail/pkg/keystone"
-	pkglog "github.com/Juniper/contrail/pkg/log"
-	"github.com/Juniper/contrail/pkg/testutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/keystone"
+	kscommon "github.com/tungstenfabric-preview/intent-service/pkg/keystone"
+	pkglog "github.com/tungstenfabric-preview/intent-service/pkg/log"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil"
 )
 
 const (
