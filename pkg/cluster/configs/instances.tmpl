@@ -1,0 +1,108 @@
+global_configuration:
+  CONTAINER_REGISTRY: {%if cluster.ContainerRegistry %}{{ cluster.ContainerRegistry }}{%else%}opencontrailnightly{%endif%}
+  REGISTRY_PRIVATE_INSECURE: {%if cluster.RegistryPrivateInsecure %}{{cluster.RegistryPrivateInsecure}}{%else%}false{%endif%}
+  {%if cluster.ContainerRegistryUsername %}CONTAINER_REGISTRY_USERNAME: {{ cluster.ContainerRegistryUsername }}{%endif%}
+  {%if cluster.ContainerRegistryPassword %}CONTAINER_REGISTRY_PASSWORD: {{ cluster.ContainerRegistryPassword }}{%endif%}
+provider_config:
+  bms:
+    ssh_user: {%if defaultSSHUser %}{{defaultSSHUser}}{%else%}root{%endif%}
+    ssh_pwd: {%if defaultSSHPassword %}{{defaultSSHPassword}}{%else%}c0ntrail123{%endif%}
+    {%if defaultSSHKey %}ssh_public_key: {{ defaultSSHKey }}{%endif%}
+    ntpserver: {{ cluster.NTPServer }}
+    domainsuffix: {%if cluster.DomainSuffix %}{{ cluster.DomainSuffix }}{%else%}local{%endif%}
+
+instances:
+    {% for node in nodes %}
+  {{ node.Hostname }}:
+    ip: {{ node.IPAddress }}
+    {% for cred in credentials %}{% for cred_ref in node.CredentialRefs %}{%if cred_ref.UUID == cred.UUID %}
+    ssh_user: {{ cred.SSHUser }}
+    ssh_pwd: {{ cred.SSHPassword }}
+    {% for key in keypairs %}{% for key_ref in cred.KeypairRefs %}{%if key_ref.UUID == key.UUID %}
+    ssh_public_key: {{ key.SSHPublicKey }}
+    {%endif%}{%endfor%}{%endfor%}
+    {%endif%}{%endfor%}{%endfor%}
+    provider: bms
+    roles:
+      {% for config_node in cluster.ContrailConfigNodes %}{% for node_ref in config_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}config:
+      {%if cluster.EnableZTP && cluster.Orchestrator == "openstack"%}dhcp:{%endif%}{%endif%}{%endfor%}{%endfor%}
+      {% for configdb_node in cluster.ContrailConfigDatabaseNodes %}{% for node_ref in configdb_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}config_database:{%endif%}{%endfor%}{%endfor%}
+      {% for control_node in cluster.ContrailControlNodes %}{% for node_ref in control_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}control:{%endif%}{%endfor%}{%endfor%}
+      {% for webui_node in cluster.ContrailWebuiNodes %}{% for node_ref in webui_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}webui:{%endif%}{%endfor%}{%endfor%}
+      {% for analytics_node in cluster.ContrailAnalyticsNodes %}{% for node_ref in analytics_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}analytics:{%endif%}{%endfor%}{%endfor%}
+      {% for analyticsdb_node in cluster.ContrailAnalyticsDatabaseNodes %}{% for node_ref in analyticsdb_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}analytics_database:{%endif%}{%endfor%}{%endfor%}
+      {% for vrouter_node in cluster.ContrailVrouterNodes %}{% for node_ref in vrouter_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}vrouter:
+        {%if vrouter_node.DefaultGateway != "" %}VROUTER_GATEWAY: {{ vrouter_node.DefaultGateway }}{%endif%}
+        {%if vrouter_node.Type == "dpdk" %}
+        CPU_CORE_MASK: {{ vrouter_node.DPDKInfo.CPUCoreMask }}
+        DPDK_UIO_DRIVER: {{ vrouter_node.DPDKInfo.DPDKUioDriver }}
+        HUGE_PAGES: {{ vrouter_node.DPDKInfo.HugePages }}
+        AGENT_MODE: dpdk
+        {%elif vrouter_node.Type == "sriov" %}
+        SRIOV: true
+        SRIOV_VF: {{ vrouter_node.SriovInfo.SriovVF }}
+        SRIOV_PHYSICAL_INTERFACE: {{ vrouter_node.SriovInfo.SriovPhysicalInterface }}
+        SRIOV_PHYS_NET: {{ vrouter_node.SriovInfo.SriovPhysicalNet }}
+        {%endif%}
+        {%endif%}{%endfor %}{%endfor%}
+      {% for csn_node in cluster.ContrailServiceNodes %}{% for node_ref in csn_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}vrouter:
+        TSN_EVPN_MODE: true
+        {%if csn_node.DefaultGateway != "" %}VROUTER_GATEWAY: {{ csn_node.DefaultGateway }}{%endif%}
+        {%endif%}{%endfor %}{%endfor%}
+      {% for dhcp_node in cluster.ContrailZTPDHCPNodes %}{% for node_ref in dhcp_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}dhcp:{%endif%}{%endfor%}{%endfor%}
+      {% for tftp_node in cluster.ContrailZTPTFTPNodes %}{% for node_ref in tftp_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}tftp:{%endif%}{%endfor%}{%endfor%}
+      {% for k8s_master_node in k8sCluster.KubernetesMasterNodes %}{% for node_ref in k8s_master_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}k8s_master:{%endif%}{%endfor%}{%endfor%}
+      {% for k8s_node in k8sCluster.KubernetesNodes %}{% for node_ref in k8s_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}k8s_node:{%endif%}{%endfor%}{%endfor%}
+      {% for k8s_kubemanager_node in k8sCluster.KubernetesKubemanagerNodes %}{% for node_ref in k8s_kubemanager_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}kubemanager:{%endif%}{%endfor%}{%endfor%}
+      {% for openstack_control_node in openstackCluster.OpenstackControlNodes %}{% for node_ref in openstack_control_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}openstack_control:{%endif%}{%endfor %}{%endfor%}
+      {% for openstack_network_node in openstackCluster.OpenstackNetworkNodes %}{% for node_ref in openstack_network_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}openstack_network:{%endif%}{%endfor%}{%endfor%}
+      {% for openstack_storage_node in openstackCluster.OpenstackStorageNodes %}{% for node_ref in openstack_storage_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}openstack_storage:
+        {%if node.DiskPartition != "" %}disk_partition: {{ node.DiskPartition }}{%endif%}{%endif%}{%endfor%}{%endfor%}
+      {% for openstack_monitoring_node in openstackCluster.OpenstackMonitoringNodes %}{% for node_ref in openstack_monitoring_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}openstack_monitoring:{%endif%}{%endfor%}{%endfor%}
+      {% for openstack_compute_node in openstackCluster.OpenstackComputeNodes %}{% for node_ref in openstack_compute_node.NodeRefs %}{%if node_ref.UUID == node.UUID %}openstack_compute:{%endif%}{%endfor%}{%endfor%}
+    {%endfor%}
+
+contrail_configuration:
+  CONTRAIL_VERSION: {%if cluster.ContrailVersion %}{{ cluster.ContrailVersion }}{%else%}latest{%endif%}
+  CLOUD_ORCHESTRATOR: {%if cluster.Orchestrator %}{{ cluster.Orchestrator }}{%else%}openstack{%endif%}
+  RABBITMQ_NODE_PORT: {%if cluster.RabbitMQPort %}{{ cluster.RabbitMQPort }}{%else%}5673{%endif%}
+  {%if cluster.DefaultGateway != "" %}VROUTER_GATEWAY: {{ cluster.DefaultGateway }}{%endif%}
+  ENCAP_PRIORITY: {%if cluster.EncapPriority %}{{cluster.EncapPriority}}{%else%}MPLSoGRE,MPLSoUDP,VXLAN{%endif%}
+{% if cluster.Orchestrator == "openstack" %}
+  {%if openstackCluster.OpenstackRelease %}OPENSTACK_VERSION: {{openstackCluster.OpenstackRelease}}{%endif%}
+  AUTH_MODE: keystone
+  KEYSTONE_AUTH_HOST: {%if openstackCluster.OpenstackInternalVip %}{{openstackCluster.OpenstackInternalVip}}{%else%}{% for node in nodes %}{%if openstackCluster.OpenstackControlNodes.0.NodeRefs.0.UUID == node.UUID %}{{node.IPAddress}}{%endif%}{%endfor%}{%endif%}
+  KEYSTONE_AUTH_URL_VERSION: {%if cluster.KeystoneVersion %}/{{cluster.KeystoneVersion}}{%else%}/v3{%endif%}
+  {% for key_value in cluster.ContrailConfiguration.KeyValuePair %}
+  {% if key_value.Key && key_value.Value%}
+  {{key_value.Key}}: {{key_value.Value}}
+  {%endif%}
+  {%endfor%}
+  {%if cluster.EnableZTP %}
+  GENERATE_SSH: True
+  USE_OPENSTACK_TFTP: True
+  {%endif%}
+
+kolla_config:
+  kolla_globals:
+    enable_haproxy: {{openstack.enableHaproxy}}
+    {%if openstackCluster.OpenstackInternalVip %}kolla_internal_vip_address: {{openstackCluster.OpenstackInternalVip}}{%endif%}
+    {% if openstackCluster.OpenstackRegistry && openstackCluster.OpenstackRegistry != "default" %}docker_registry: {{ openstackCluster.OpenstackRegistry }}{%endif%}
+    {%if openstackCluster.OpenstackExternalVip %}kolla_external_vip_address: {{openstackCluster.OpenstackExternalVip}}{%endif%}
+    {% for key_value in openstackCluster.KollaGlobals.KeyValuePair %}
+    {% if key_value.Key && key_value.Value%}
+    {{key_value.Key}}: {{key_value.Value}}
+    {%endif%}
+    {%endfor%}
+  kolla_passwords:
+    keystone_admin_password: contrail123
+    {% for key_value in openstackCluster.KollaPasswords.KeyValuePair %}
+    {% if key_value.Key && key_value.Value%}
+    {{key_value.Key}}: {{key_value.Value}}
+    {%endif%}
+    {%endfor%}
+  {% if openstackCluster.Customize %}
+  customize:
+    {{ openstackCluster.Customize }}
+  {%endif%}
+{%endif%}

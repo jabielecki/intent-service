@@ -1,0 +1,22 @@
+{% if input.AuthURL %}
+id: {{ input.ID }}
+password: {{ input.Password }}
+{%if input.DomainID %}domain_id: {{ input.DomainID }}{%endif%}
+{%if input.DomainName %}domain_Name: {{ input.DomainName }}{%endif%}
+{%if input.ProjectID %}project_id: {{ input.ProjectID }}{%endif%}
+{%if input.ProjectName %}project_name: {{ input.ProjectName }}{%endif%}
+auth_url: {{ input.AuthURL }}
+{% endif %}
+endpoint: {{ input.Endpoint }}
+insecure: {{ input.InSecure }}
+cluster_id: {{ resource.uuid }}
+cluster_action: {{ action }}
+provisioner_type: {{ resource.ProvisionerType }}
+log_level: debug
+template_root: /usr/share/contrail/templates/
+
+# Optional ansible params for dev/test
+#ansible_sudo_pass: secret123
+#ansible_fetch_url: https://review.opencontrail.org/Juniper/contrail-ansible-deployer refs/changes/80/40780/20
+#ansible_cherry_pick_revision: FETCH_HEAD
+#ansible_deployer_revision: GIT_COMMIT_HASH

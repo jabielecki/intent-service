@@ -1,0 +1,49 @@
+- hosts: builder
+  name: Build and test Juniper/contrail
+  roles:
+    - zuul-include-vars # include variables exported from trusted context
+    - install-docker-daemon
+    - role: add-insecure-registry
+      new_registry: "{{ contrail_docker_registry }}"
+  vars:
+    workdir: /go/src/github.com/Juniper/contrail
+    sourcedir: "{{ ansible_env.HOME }}"
+  tasks:
+    - include: build-setup.yaml
+
+    - name: run
+      include: build-step.yaml
+      loop_control:
+        label: "{{ item.name }}"
+      with_items: # Insert tasks here
+        - name: Install deps
+          command: make deps
+        - name: make generate
+          command: make generate
+        - name: make check
+          command: make check
+        - name: make lint
+          command: make lint
+        - name: reset db
+          command: make reset_db
+        - name: make test
+          command: make test
+        - name: Make docker
+          command: make ANSIBLE_DEPLOYER_BRANCH={{ zuul.branch }} CONTRAIL_API_CLIENT_BRANCH={{ zuul.branch }} docker
+
+    - name: Fix files ownerships
+      file:
+        name: "{{ sourcedir }}"
+        recurse: yes
+        owner: "{{ ansible_env.USER }}"
+      become: yes
+      become_user: root
+
+- hosts: builder
+  name: Publish containers to the internal registry
+  roles:
+    - role: publish-container-images
+      registry: "{{ contrail_docker_registry }}"
+      tag: "{{ packaging.docker_version }}"
+      images:
+        - { name: contrail-go, tag: latest }

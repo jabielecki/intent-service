@@ -1,0 +1,43 @@
+- provider: onprem
+  organization: {{ cloud.info.Organization }}
+  project: {{ cloud.projectName }}
+  instances:
+  {% for instance in cloud.instances %}
+    - name: {{ instance.info.Hostname }}
+      public_ip: {{ instance.info.IPAddress }}
+      private_ip: {{ instance.pvtIntf.IPAddress }}
+      interface: {{ instance.pvtIntf.Name }}
+      provision: {{ instance.provision }}
+      {% for cred in cloud.credentials %}{% for cred_ref in instance.info.CredentialRefs %}{%if cred_ref.UUID in cred.UUID %}
+      username: {{ cred.SSHUser }}
+      password: {{ cred.SSHPassword }}
+      {% endif %}{% endfor %}{% endfor %}
+      {% if instance.tags %}
+      {% for key, value in instance.tags %}
+      {{ key }}: {{ value }}
+      {% endfor %}
+      {% endif %}
+      {% if instance.roles %}
+      roles:
+      {% for role in instance.roles %}
+        - {{ role }}
+      {% endfor %}
+      {% for role in instance.roles %}
+      {% if "gateway" in role %}
+      private_subnet:
+      {% for subnet in cloud.subnets %}
+        - {{ subnet.info.CidrBlock }}
+      {% endfor %}
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+      {% if instance.protocolsMode %}
+      protocols_mode:
+      {% for mode in instance.protocolsMode %}
+        - {{ mode }}
+      {% endfor %}
+      {% endif %}
+      {% if instance.gateway %}
+      gateway: {{ instance.gateway }}
+      {% endif %}
+  {% endfor %}

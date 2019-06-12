@@ -1,0 +1,40 @@
+description: SSH KeyPairs
+extends:
+- base
+id: keypair
+parents:
+  global_system_config:
+    operations: "CRUD"
+    description: "Parent of this key-pair resource."
+    presence: "optional"
+plural: keypairs
+prefix: /
+schema:
+  properties:
+    ssh_public_key:
+      description: SSH Public Key
+      nullable: false
+      permission:
+      - create
+      - update
+      sql: text
+      title: SSH public key
+      type: string
+      view:
+      - detail
+    ssh_key_path:
+      description: SSH private key path in the deployer instance
+      nullable: false
+      permission:
+      - create
+      - update
+      sql: text
+      title: SSH public key
+      type: string
+      view:
+      - detail
+  required: []
+  type: object
+singular: keypair
+title: SSH KeyPair
+type: ""

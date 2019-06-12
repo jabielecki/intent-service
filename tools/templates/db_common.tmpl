@@ -1,0 +1,56 @@
+package db
+
+import (
+    "context"
+    "fmt"
+
+    "github.com/Juniper/contrail/pkg/services"
+)
+
+func (db *Service) initQueryBuilders() {
+    queryBuilders := map[string]*QueryBuilder{}
+    db.queryBuilders = queryBuilders
+
+{% for schema in schemas %}{% if schema.Type != "abstract" and schema.ID %}
+    queryBuilders["{{ schema.ID }}"] = NewQueryBuilder(db.Dialect,
+       "{{ schema.ID | lower }}",
+       {{ schema.JSONSchema.GoName }}Fields,
+       {{ schema.JSONSchema.GoName }}RefFields,
+       {{ schema.JSONSchema.GoName }}ChildFields,
+       {{ schema.JSONSchema.GoName }}BackRefFields)
+{% endif%}{% endfor %}
+}
+
+
+func (db *Service) dump(ctx context.Context, ow ObjectWriter) error {
+{% for schema in schemas %}{% if schema.Type != "abstract" and schema.ID %}
+    list{{ schema.JSONSchema.GoName }}Response, err := db.list{{ schema.JSONSchema.GoName }}(
+        ctx,
+        &services.List{{ schema.JSONSchema.GoName }}Request{
+        	Spec: &services.ListSpec{
+        		Detail: true,
+        	},
+        },
+    )
+    if err != nil {
+        return err
+    }
+
+    for _, item := range list{{ schema.JSONSchema.GoName }}Response.{{ schema.JSONSchema.GoName }}s {
+        if err = ow.WriteObject("{{ schema.ID }}", item.GetUUID(), item); err != nil {
+            return err
+        }
+    }
+{% endif%}{% endfor %}
+    return nil
+}
+
+// ScanRow maps row from database table named schemaID into generated Go struct.
+func (db *Service) ScanRow(schemaID string, rowData map[string]interface{}) (Object, error) {
+    switch schemaID { {% for schema in schemas %}{% if schema.Type != "abstract" and schema.ID %}
+    case "{{ schema.ID }}":
+        return db.scan{{schema.JSONSchema.GoName}}(rowData){% endif%}{% endfor %}
+    }
+
+    return nil, fmt.Errorf("unknown schemaID: %v", schemaID)
+}

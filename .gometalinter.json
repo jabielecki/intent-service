@@ -1,0 +1,46 @@
+{
+    "Enable": [
+        "deadcode",
+        "errcheck",
+        "goconst",
+        "gocyclo",
+        "gofmt",
+        "goimports",
+        "golint",
+        "gotype",
+        "gotypex",
+        "ineffassign",
+        "interfacer",
+        "lll",
+        "maligned",
+        "misspell",
+        "nakedret",
+        "structcheck",
+        "unconvert",
+        "unparam",
+        "varcheck",
+        "vet",
+        "vetshadow"
+    ],
+    "Exclude": [
+        "gen_.*.go",
+        "generated.pb.go",
+        "parameter .* always receives.*(unparam)"
+    ],
+    "Skip": [
+        "pkg/compilationif",
+        "pkg/services/mock",
+        "pkg/types/mock",
+        "pkg/types/ipam/mock"
+    ],
+    "Test": true,
+    "Vendor": true,
+    "Aggregate": true,
+    "Sort": [
+        "path",
+        "line"
+    ],
+    "Deadline": "7m",
+    "Concurrency": 2,
+    "LineLength": 120
+}
