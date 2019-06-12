@@ -1,0 +1,104 @@
+{% if cloud.providers|length >= 1 %}
+{% for provider in cloud.providers %}
+{% with provider.info.Type as cloudType "azure" as az "aws" as aws %}
+- provider: {{ cloudType }}
+  organization: {{ cloud.info.Organization }}
+  project: {{ cloud.info.Project }}
+  {% if provider.regions|length >= 1 %}
+  regions:
+  {% for region in provider.regions %}
+    - name: {{ region.info.DisplayName }}
+    {% if az in cloudType %}
+      resource_group: {{ region.info.ResourceGroup }}
+    {% endif %}
+    {% if region.virtualClouds|length >= 1 %}
+    {% if az in cloudType %}
+      vnet:
+    {% elif aws in cloudType %}
+      vpc:
+    {% endif %}
+    {% for vcloud in region.virtualClouds %}
+        - name: {{ vcloud.info.Name }}
+          cidr_block: {{ vcloud.info.CidrBlock }}
+          {% if vcloud.subnets|length >= 1 %}
+          subnets:
+          {% for subnet in vcloud.subnets %}
+            - name: {{ subnet.info.Name }}
+              cidr_block: {{ subnet.info.CidrBlock }}
+              {% if aws in cloudType %}
+              availability_zone: {{ subnet.info.AvailabilityZone }}
+              {% elif az in cloudType %}
+              {% if vcloud.info.CloudSecurityGroups %}security_group: {{ vcloud.info.CloudSecurityGroups.0.Name }}{% endif %}
+              {% endif %}
+          {% endfor %}
+          {% endif %}
+          {% if vcloud.sgs|length >= 1 %}
+          security_groups:
+          {% for sg in vcloud.sgs %}
+            {% if az in cloudType %}
+            - name: {{ sg.info.Name }}
+              rules:
+              {% for sgRule in sg.info.CloudSecurityGroupRules %}
+                - name: {{ sgRule.Name }}
+                  direction: {% if "ingress" in sgRule.Direction %}inbound{% elif "egress" in sgRule.Direction %}outbound{% endif %}
+              {% endfor %}
+            {% elif aws in cloudType %}
+              {% for sgRule in sg.info.CloudSecurityGroupRules %}
+              - name: {{ sgRule.Name }}
+                {{ sgRule.Direction }}:
+                  from_port: {{ sgRule.FromPort|default:0 }}
+                  to_port: {{ sgRule.ToPort|default:0}}
+                  protocol: {% if "ANY" in sgRule.Protocol %}-1{% else %}{{ sgRule.Protocol|default:"-1" }}{% endif %}
+                  cidr_blocks:
+                  - {{ sgRule.CidrBlock|default:"0.0.0.0/0" }}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+          {% endif %}
+          {% if vcloud.instances|length >= 1 %}
+          instances:
+          {% for instance in vcloud.instances %}
+            - name: {{ instance.info.Hostname }}
+              roles:
+              {% if instance.roles %}{% set roles = instance.roles %}{% else %}{% set roles = instance.info.CloudInfo.Roles %}{% endif %}
+              {% for role in roles %}
+                {% if "compute" in role %}
+                - compute_node
+                {% else %}
+                - {{ role }}
+                {% endif %}
+              {% endfor %}
+              provision: {{ instance.provision|default:true }}
+              username: {{ instance.username }}
+              os: {{ instance.info.CloudInfo.OperatingSystem }}
+              instance_type: {{ instance.info.CloudInfo.InstanceType }}
+              {% for subnet in cloud.subnets %}{% for subnet_ref in instance.info.CloudPrivateSubnetRefs %}{% if subnet_ref.UUID in subnet.info.UUID %}
+              subnets: {{ subnet.info.Name }}
+              {% if aws in cloudType %}
+              availability_zone: {{ subnet.info.AvailabilityZone }}
+              {% endif %}
+              {% endif %}{% endfor %}{% endfor %}
+              {% if instance.protocolsMode %}
+              protocols_mode:
+              {% for mode in instance.protocolsMode %}
+                - {{ mode }}
+              {% endfor %}
+              {% endif %}
+              {% if aws in cloudType %}
+              {% if instance.info.CloudSecurityGroupRefs %}
+              security_groups:
+              {% for sg in cloud.securityGroups %}{% for sg_ref in instance.info.CloudSecurityGroupRefs %}{% if sg_ref.UUID in sg.info.UUID %}
+                {% for sgRule in sg.info.CloudSecurityGroupRules %}
+                - {{ sgRule.Name }}
+                {% endfor %}
+              {% endif %}{% endfor %}{% endfor %}
+              {% endif %}{% endif %}
+          {% endfor %}
+          {% endif %}
+    {% endfor %}
+    {% endif %}
+  {% endfor %}
+  {% endif %}
+{% endwith %}
+{% endfor %}
+{% endif %}

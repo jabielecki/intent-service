@@ -1,0 +1,37 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Project specific paths
+base.pb.go
+bin/
+coverage.log
+dist/
+doc/proto.md
+docker/contrail_go/etc/
+docker/contrail_go/contrail
+docker/contrail_go/contrailcli
+**/gen_*
+pkg/**/mock/*
+profile.cov
+profile.tmp
+public/
+test_output/
+unittests.log
+
+!vendor/**
+*.log
+
+.idea

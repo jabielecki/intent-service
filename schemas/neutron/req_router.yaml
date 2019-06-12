@@ -1,0 +1,33 @@
+---
+api_style: contrail
+id: router
+prefix: /neutron/
+type: request
+schema:
+  type: object
+  properties:
+    id:
+      type: string
+    tenant_id:
+      type: string
+    description:
+      type: string
+    admin_state_up:
+      type: boolean
+    name:
+      type: string
+    port_id:
+      type: string
+    subnet_id:
+      type: string
+    external_gateway_info:
+      $ref: req_router.json#/definitions/ExtGatewayInfo
+
+definitions:
+  ExtGatewayInfo:
+    type: object
+    properties:
+      network_id:
+        type: string
+      enable_snat:
+        type: boolean

@@ -1,0 +1,2 @@
+- type: all
+  template_path: pkg/neutron/logic/models.go.tmpl
