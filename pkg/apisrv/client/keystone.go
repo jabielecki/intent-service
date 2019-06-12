@@ -11,10 +11,10 @@ import (
 	"github.com/labstack/echo"
 	"github.com/pkg/errors"
 
-	"github.com/Juniper/contrail/pkg/auth"
-	"github.com/Juniper/contrail/pkg/collector"
-	"github.com/Juniper/contrail/pkg/collector/analytics"
-	"github.com/Juniper/contrail/pkg/keystone"
+	"github.com/tungstenfabric-preview/intent-service/pkg/auth"
+	"github.com/tungstenfabric-preview/intent-service/pkg/collector"
+	"github.com/tungstenfabric-preview/intent-service/pkg/collector/analytics"
+	"github.com/tungstenfabric-preview/intent-service/pkg/keystone"
 )
 
 // Keystone is a keystone client.

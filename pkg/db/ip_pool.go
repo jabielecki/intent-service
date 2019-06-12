@@ -10,8 +10,8 @@ import (
 	"github.com/apparentlymart/go-cidr/cidr"
 	"github.com/pkg/errors"
 
-	"github.com/Juniper/contrail/pkg/db/basedb"
-	"github.com/Juniper/contrail/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/basedb"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
 )
 
 // ipPool struct, represents a range of available ips.

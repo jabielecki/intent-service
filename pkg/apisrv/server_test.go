@@ -8,12 +8,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/twinj/uuid"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	"github.com/Juniper/contrail/pkg/keystone"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/services/baseservices"
-	"github.com/Juniper/contrail/pkg/testutil/integration"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	"github.com/tungstenfabric-preview/intent-service/pkg/keystone"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services/baseservices"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil/integration"
 )
 
 func TestKVStore(t *testing.T) {

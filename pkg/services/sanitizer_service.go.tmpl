@@ -3,8 +3,8 @@ package services
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
 )
 
 {% for schema in schemas %}{% if schema.Type != "abstract" and schema.ID %}

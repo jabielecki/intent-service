@@ -7,9 +7,9 @@ import (
 	"github.com/gogo/protobuf/types"
 	"github.com/pkg/errors"
 
-	"github.com/Juniper/contrail/pkg/models/basemodels"
-	"github.com/Juniper/contrail/pkg/schema"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/schema"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 // DecodeRowEvent transforms row data into *services.Event.

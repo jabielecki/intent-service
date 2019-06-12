@@ -9,9 +9,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
 
-	"github.com/Juniper/contrail/pkg/constants"
+	"github.com/tungstenfabric-preview/intent-service/pkg/constants"
 
-	"github.com/Juniper/contrail/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
 )
 
 // Codec can encode objects and update encoded data with new data object.

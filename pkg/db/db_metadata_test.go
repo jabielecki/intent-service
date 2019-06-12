@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Juniper/contrail/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
 )
 
 func TestService_ListMetadata(t *testing.T) {

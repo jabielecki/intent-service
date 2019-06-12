@@ -101,7 +101,7 @@ func TestJSONUnmarshal(t *testing.T) {
 // $ go test -bench Unmarshal -benchtime 30s -benchmem
 // goos: linux
 // goarch: amd64
-// pkg: github.com/Juniper/contrail/pkg/models
+// pkg: github.com/tungstenfabric-preview/intent-service/pkg/models
 // BenchmarkJSONUnmarshal-4          	  500000	    111058 ns/op	    6352 B/op	      79 allocs/op
 // BenchmarkUnmarshalAndApplyMap-4   	  500000	    112913 ns/op	   21353 B/op	     479 allocs/op
 

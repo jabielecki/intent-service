@@ -3,8 +3,8 @@ package analytics
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/collector"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/collector"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 const (

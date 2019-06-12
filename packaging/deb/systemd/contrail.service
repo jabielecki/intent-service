@@ -1,6 +1,6 @@
 [Unit]
 Description=CONTRAIL instance
-Documentation=https://github.com/Juniper/contrail/tree/master/doc
+Documentation=https://github.com/tungstenfabric-preview/intent-service/tree/master/doc
 Wants=network-online.target
 After=network-online.target
 After=mariadb.service mysql.service

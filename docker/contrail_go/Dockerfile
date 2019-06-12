@@ -2,7 +2,7 @@ FROM centos:7.4.1708
 ARG GOPATH
 MAINTAINER Nachi Ueno nueno@juniper.net
 
-COPY ./src/ $GOPATH/src/github.com/Juniper/
+COPY ./src/ $GOPATH/src/github.com/tungstenfabric-preview/intent-service/../
 ADD ./contrail /bin/contrail
 ADD ./contrailcli /bin/contrailcli
 ADD ./contrailutil /bin/contrailutil

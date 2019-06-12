@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Juniper/contrail/pkg/auth"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/auth"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
 )
 
 func TestBasePropertiesGetDefaultValuesOnCreate(t *testing.T) {

@@ -7,8 +7,8 @@ import (
 	"github.com/spf13/cobra"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/Juniper/contrail/pkg/logutil"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 func init() {

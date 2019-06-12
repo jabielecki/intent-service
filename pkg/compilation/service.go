@@ -16,15 +16,15 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	"github.com/Juniper/contrail/pkg/compilation/config"
-	"github.com/Juniper/contrail/pkg/compilation/dependencies"
-	"github.com/Juniper/contrail/pkg/compilation/intent"
-	"github.com/Juniper/contrail/pkg/compilation/logic"
-	"github.com/Juniper/contrail/pkg/compilation/watch"
-	"github.com/Juniper/contrail/pkg/db/etcd"
-	"github.com/Juniper/contrail/pkg/logutil"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/config"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/dependencies"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/intent"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/logic"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/watch"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/etcd"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 const serviceName = "intent-compiler"

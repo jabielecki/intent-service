@@ -7,13 +7,13 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
 
-	"github.com/Juniper/contrail/pkg/auth"
-	"github.com/Juniper/contrail/pkg/db/basedb"
-	"github.com/Juniper/contrail/pkg/errutil"
-	"github.com/Juniper/contrail/pkg/format"
-	"github.com/Juniper/contrail/pkg/models/basemodels"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/services/baseservices"
+	"github.com/tungstenfabric-preview/intent-service/pkg/auth"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/basedb"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/format"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services/baseservices"
 )
 
 //Service for DB.

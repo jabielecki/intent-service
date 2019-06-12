@@ -3,8 +3,8 @@ package types
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/models/basemodels"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 // CreateServiceTemplate validates domain UUID and enables domain sharing for service template.

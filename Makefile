@@ -106,7 +106,7 @@ $(foreach mock,$(MOCKS),$(eval $(call create-generate-mock-target,$(mock))))
 generate_mocks: $(MOCKS)
 
 PROTO := ./bin/protoc -I ./vendor/ -I ./vendor/github.com/gogo/protobuf/protobuf -I ./proto
-PROTO_PKG_PATH := proto/github.com/Juniper/contrail/pkg
+PROTO_PKG_PATH := proto/github.com/tungstenfabric-preview/intent-service/pkg
 
 pkg/%.pb.go: $(PROTO_PKG_PATH)/%.proto
 	$(PROTO) --gogofaster_out=Mgoogle/protobuf/field_mask.proto=github.com/gogo/protobuf/types,\

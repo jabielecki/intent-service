@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	integrationetcd "github.com/Juniper/contrail/pkg/testutil/integration/etcd"
+	integrationetcd "github.com/tungstenfabric-preview/intent-service/pkg/testutil/integration/etcd"
 )
 
 const (

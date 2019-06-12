@@ -1,10 +1,10 @@
 package integration
 
 import (
-	"github.com/Juniper/contrail/pkg/constants"
-	"github.com/Juniper/contrail/pkg/db/basedb"
-	"github.com/Juniper/contrail/pkg/models"
-	integrationetcd "github.com/Juniper/contrail/pkg/testutil/integration/etcd"
+	"github.com/tungstenfabric-preview/intent-service/pkg/constants"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/basedb"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	integrationetcd "github.com/tungstenfabric-preview/intent-service/pkg/testutil/integration/etcd"
 )
 
 // SetDefaultSyncConfig sets config options required by sync.

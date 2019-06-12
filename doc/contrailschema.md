@@ -11,8 +11,8 @@ Flags:
   -h, --help                    help for generate
       --openapi-output string   OpenAPI Output path
       --output-dir string       output dir (default "./")
-  -p, --package-path string     Package name (default "github.com/Juniper/contrail")
-      --proto-package string    Protoc package base (default "github.com.Juniper.contrail")
+  -p, --package-path string     Package name (default "github.com/tungstenfabric-preview/intent-service")
+      --proto-package string    Protoc package base (default "github.com.tungstenfabric-preview.intent-service")
       --schema-output string    Schema Output path
   -s, --schemas string          Schema Directory
   -t, --templates string        Template Configuration

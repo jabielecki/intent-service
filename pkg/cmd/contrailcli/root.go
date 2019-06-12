@@ -7,11 +7,11 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	"github.com/Juniper/contrail/pkg/fileutil"
-	"github.com/Juniper/contrail/pkg/keystone"
-	"github.com/Juniper/contrail/pkg/logutil"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	"github.com/tungstenfabric-preview/intent-service/pkg/fileutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/keystone"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 var configFile string

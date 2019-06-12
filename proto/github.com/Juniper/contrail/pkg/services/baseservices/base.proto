@@ -1,5 +1,5 @@
 syntax = "proto3";
-package github.com.Juniper.contrail.pkg.services.baseservices;
+package github.com.tungstenfabric-preview.intent-service.pkg.services.baseservices;
 
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 

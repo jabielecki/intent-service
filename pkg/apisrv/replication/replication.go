@@ -7,12 +7,12 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"github.com/Juniper/contrail/pkg/logutil"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 
-	apicommon "github.com/Juniper/contrail/pkg/apisrv/common"
-	syncp "github.com/Juniper/contrail/pkg/sync"
+	apicommon "github.com/tungstenfabric-preview/intent-service/pkg/apisrv/common"
+	syncp "github.com/tungstenfabric-preview/intent-service/pkg/sync"
 )
 
 const (

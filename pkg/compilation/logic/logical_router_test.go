@@ -7,14 +7,14 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Juniper/contrail/pkg/compilation/dependencies"
-	"github.com/Juniper/contrail/pkg/compilation/intent"
-	"github.com/Juniper/contrail/pkg/db"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	servicesmock "github.com/Juniper/contrail/pkg/services/mock"
-	"github.com/Juniper/contrail/pkg/testutil"
-	typesmock "github.com/Juniper/contrail/pkg/types/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/dependencies"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/intent"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	servicesmock "github.com/tungstenfabric-preview/intent-service/pkg/services/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil"
+	typesmock "github.com/tungstenfabric-preview/intent-service/pkg/types/mock"
 )
 
 func TestCreateLogicalRouterCreatesRouteTarget(t *testing.T) {

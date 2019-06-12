@@ -1,9 +1,9 @@
 package logic
 
 import (
-	"github.com/Juniper/contrail/pkg/compilation/intent"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/intent"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
 )
 
 // NetworkPolicyIntent intent

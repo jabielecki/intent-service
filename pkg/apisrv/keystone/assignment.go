@@ -10,9 +10,9 @@ import (
 	"github.com/labstack/echo"
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	"github.com/Juniper/contrail/pkg/format"
-	kscommon "github.com/Juniper/contrail/pkg/keystone"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	"github.com/tungstenfabric-preview/intent-service/pkg/format"
+	kscommon "github.com/tungstenfabric-preview/intent-service/pkg/keystone"
 )
 
 //Assignment is used to manage domain, project and user information.

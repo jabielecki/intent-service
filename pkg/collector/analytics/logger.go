@@ -3,7 +3,7 @@ package analytics
 import (
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/collector"
+	"github.com/tungstenfabric-preview/intent-service/pkg/collector"
 )
 
 const doNotSendCollectorKey = "no-collector"

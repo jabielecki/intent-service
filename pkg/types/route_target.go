@@ -3,8 +3,8 @@ package types
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/errutil"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 // CreateRouteTarget validates Route Target name before creation

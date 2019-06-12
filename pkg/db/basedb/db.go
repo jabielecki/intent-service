@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Juniper/contrail/pkg/collector"
-	"github.com/Juniper/contrail/pkg/collector/analytics"
+	"github.com/tungstenfabric-preview/intent-service/pkg/collector"
+	"github.com/tungstenfabric-preview/intent-service/pkg/collector/analytics"
 
 	"github.com/ExpansiveWorlds/instrumentedsql"
 	"github.com/go-sql-driver/mysql"
@@ -18,7 +18,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"github.com/Juniper/contrail/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
 )
 
 // Database drivers

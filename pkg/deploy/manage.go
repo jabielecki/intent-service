@@ -4,10 +4,10 @@ import (
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/deploy/base"
-	"github.com/Juniper/contrail/pkg/deploy/cluster"
-	"github.com/Juniper/contrail/pkg/deploy/rhospd/undercloud"
-	"github.com/Juniper/contrail/pkg/logutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/deploy/base"
+	"github.com/tungstenfabric-preview/intent-service/pkg/deploy/cluster"
+	"github.com/tungstenfabric-preview/intent-service/pkg/deploy/rhospd/undercloud"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil"
 )
 
 // manager inerface to manage resources

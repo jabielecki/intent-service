@@ -10,9 +10,9 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"github.com/Juniper/contrail/pkg/constants"
+	"github.com/tungstenfabric-preview/intent-service/pkg/constants"
 
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 //EventProducer watches etcd and call event processor.

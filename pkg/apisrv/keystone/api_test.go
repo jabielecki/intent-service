@@ -17,13 +17,13 @@ import (
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/Juniper/contrail/pkg/apisrv/client"
-	"github.com/Juniper/contrail/pkg/apisrv/keystone"
-	"github.com/Juniper/contrail/pkg/auth"
-	"github.com/Juniper/contrail/pkg/db/basedb"
-	kscommon "github.com/Juniper/contrail/pkg/keystone"
-	"github.com/Juniper/contrail/pkg/testutil"
-	"github.com/Juniper/contrail/pkg/testutil/integration"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/client"
+	"github.com/tungstenfabric-preview/intent-service/pkg/apisrv/keystone"
+	"github.com/tungstenfabric-preview/intent-service/pkg/auth"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/basedb"
+	kscommon "github.com/tungstenfabric-preview/intent-service/pkg/keystone"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil/integration"
 )
 
 const (

@@ -8,11 +8,11 @@ import (
 	"github.com/pkg/errors"
 	uuid "github.com/satori/go.uuid"
 
-	"github.com/Juniper/contrail/pkg/errutil"
-	"github.com/Juniper/contrail/pkg/format"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/types/ipam"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/format"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/types/ipam"
 )
 
 // CreateIpamSubnet creates IPAM subnet

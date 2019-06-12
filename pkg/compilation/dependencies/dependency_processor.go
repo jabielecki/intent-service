@@ -1,7 +1,7 @@
 package dependencies
 
 import (
-	"github.com/Juniper/contrail/pkg/compilation/intent"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/intent"
 )
 
 // KindSet Set of strings representing resource Kind

@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Juniper/contrail/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
 )
 
 func TestUpdateData(t *testing.T) {

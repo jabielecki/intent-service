@@ -9,9 +9,9 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"github.com/Juniper/contrail/pkg/db/basedb"
-	"github.com/Juniper/contrail/pkg/format"
-	"github.com/Juniper/contrail/pkg/logutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/basedb"
+	"github.com/tungstenfabric-preview/intent-service/pkg/format"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil"
 )
 
 var db *Service

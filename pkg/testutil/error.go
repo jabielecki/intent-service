@@ -1,6 +1,6 @@
 package testutil
 
-import "github.com/Juniper/contrail/pkg/logutil"
+import "github.com/tungstenfabric-preview/intent-service/pkg/logutil"
 
 // LogFatalIfError executes given function and calls log.Fatal() if it returned an error.
 func LogFatalIfError(f func() error) {

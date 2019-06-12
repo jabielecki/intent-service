@@ -3,7 +3,7 @@ package neutron_test
 import (
 	"testing"
 
-	"github.com/Juniper/contrail/pkg/testutil/integration"
+	"github.com/tungstenfabric-preview/intent-service/pkg/testutil/integration"
 )
 
 var server *integration.APIServer

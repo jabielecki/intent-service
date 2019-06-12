@@ -3,7 +3,7 @@ package models
 import (
 	"github.com/twinj/uuid"
 
-	"github.com/Juniper/contrail/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
 )
 
 // CheckNetworkPolicyRules validates policy rules from policy entries for Network Policy.

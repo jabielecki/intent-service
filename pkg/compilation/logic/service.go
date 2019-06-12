@@ -5,9 +5,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Juniper/contrail/pkg/compilation/dependencies"
-	"github.com/Juniper/contrail/pkg/compilation/intent"
-	"github.com/Juniper/contrail/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/dependencies"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/intent"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
 )
 
 // Service implementing Intent Compiler's type-specific logic.

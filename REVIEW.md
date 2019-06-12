@@ -16,8 +16,8 @@ Code should be compliant with rules from:
 Imports should be split into 3 groups:
 1.  standard library packages, e.g. `net/http`;
 2.  third-party library packages, e.g. `github.com/pkg/errors`;
-3.  packages under `github.com/Juniper/contrail`,
-    e.g. `github.com/Juniper/contrail/pkg/models`;
+3.  packages under `github.com/tungstenfabric-preview/intent-service`,
+    e.g. `github.com/tungstenfabric-preview/intent-service/pkg/models`;
 
 Additionally, each of the groups should be sorted alphabetically -
 `goimports` will do it for you.
@@ -29,7 +29,7 @@ Additionally, each of the groups should be sorted alphabetically -
 -
 -	"net/http"
 -
--	"github.com/Juniper/contrail/pkg/models/basemodels"
+-	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
 -	"github.com/labstack/echo"
 -)
 +// Do
@@ -39,7 +39,7 @@ Additionally, each of the groups should be sorted alphabetically -
 +
 +	"github.com/labstack/echo"
 +
-+	"github.com/Juniper/contrail/pkg/models/basemodels"
++	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
 +)
 ```
 

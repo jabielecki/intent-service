@@ -7,8 +7,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Juniper/contrail/pkg/db/basedb"
-	"github.com/Juniper/contrail/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/db/basedb"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
 )
 
 // StoreKeyValue stores a value under given key.

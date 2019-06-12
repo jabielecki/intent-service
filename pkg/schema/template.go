@@ -10,7 +10,7 @@ import (
 	"github.com/flosch/pongo2"
 	"github.com/pkg/errors"
 
-	"github.com/Juniper/contrail/pkg/fileutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/fileutil"
 )
 
 const (

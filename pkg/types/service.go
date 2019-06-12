@@ -3,10 +3,10 @@ package types
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/models/basemodels"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/services/baseservices"
-	"github.com/Juniper/contrail/pkg/types/ipam"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services/baseservices"
+	"github.com/tungstenfabric-preview/intent-service/pkg/types/ipam"
 )
 
 const (

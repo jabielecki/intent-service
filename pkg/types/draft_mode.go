@@ -3,8 +3,8 @@ package types
 import (
 	"context"
 
-	"github.com/Juniper/contrail/pkg/auth"
-	"github.com/Juniper/contrail/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/auth"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
 )
 
 type draftModeStateGetter interface {

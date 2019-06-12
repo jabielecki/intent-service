@@ -9,7 +9,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Juniper/contrail/pkg/constants"
+	"github.com/tungstenfabric-preview/intent-service/pkg/constants"
 )
 
 //BaseValidator embedding SchemaValidator validator. It enables defining custom validation for each type

@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/neutron/logic"
-	neutronmock "github.com/Juniper/contrail/pkg/neutron/mock"
-	"github.com/Juniper/contrail/pkg/services"
-	servicesmock "github.com/Juniper/contrail/pkg/services/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/neutron/logic"
+	neutronmock "github.com/tungstenfabric-preview/intent-service/pkg/neutron/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	servicesmock "github.com/tungstenfabric-preview/intent-service/pkg/services/mock"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 )

@@ -6,7 +6,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/compilation/intent"
+	"github.com/tungstenfabric-preview/intent-service/pkg/compilation/intent"
 )
 
 // EvaluateDependencies evaluates the dependencies upon object change

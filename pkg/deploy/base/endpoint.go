@@ -6,8 +6,8 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/Juniper/contrail/pkg/format"
-	"github.com/Juniper/contrail/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/format"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
 )
 
 const (

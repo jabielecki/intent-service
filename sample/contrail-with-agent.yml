@@ -39,10 +39,10 @@ server:
   # TLS Configuration
   tls:
       enabled: true
-      #key_file: /root/go/src/github.com/Juniper/contrail-ui/docker/ssl/cs-key.pem
-      #cert_file: /root/go/src/github.com/Juniper/contrail-ui/docker/ssl/cs-cert.pem
-      key_file: /root/go/src/github.com/Juniper/contrail/tools/server.key
-      cert_file: /root/go/src/github.com/Juniper/contrail/tools/server.crt
+      #key_file: /root/go/src/github.com/tungstenfabric-preview/intent-service-ui/docker/ssl/cs-key.pem
+      #cert_file: /root/go/src/github.com/tungstenfabric-preview/intent-service-ui/docker/ssl/cs-cert.pem
+      key_file: /root/go/src/github.com/tungstenfabric-preview/intent-service/tools/server.key
+      cert_file: /root/go/src/github.com/tungstenfabric-preview/intent-service/tools/server.crt
 
   # Enable GRPC or not
   enable_grpc: false
@@ -51,7 +51,7 @@ server:
   # key: URL path
   # value: file path. (absolute path recommended in production)
   static_files:
-      /: /root/go/src/github.com/Juniper/contrail/public
+      /: /root/go/src/github.com/tungstenfabric-preview/intent-service/public
 
   # API Proxy configuration
   # key: URL path

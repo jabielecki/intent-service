@@ -4,9 +4,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/Juniper/contrail/pkg/constants"
-	"github.com/Juniper/contrail/pkg/convert"
-	"github.com/Juniper/contrail/pkg/logutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/constants"
+	"github.com/tungstenfabric-preview/intent-service/pkg/convert"
+	"github.com/tungstenfabric-preview/intent-service/pkg/logutil"
 )
 
 func init() {

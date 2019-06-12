@@ -5,7 +5,7 @@ import (
 
 	"github.com/labstack/echo"
 
-	"github.com/Juniper/contrail/pkg/auth"
+	"github.com/tungstenfabric-preview/intent-service/pkg/auth"
 )
 
 // RESTGetObjPerms handles GET operation of obj-perms request.

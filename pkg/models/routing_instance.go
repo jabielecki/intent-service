@@ -1,6 +1,6 @@
 package models
 
-import "github.com/Juniper/contrail/pkg/models/basemodels"
+import "github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
 
 // IsIPFabric returns true if routing instance FQName fits IP Fabric
 func (ri *RoutingInstance) IsIPFabric() bool {

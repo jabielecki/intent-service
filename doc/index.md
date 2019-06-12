@@ -112,7 +112,7 @@ Sample configuration files are located in ["sample" directory](../sample).
 
 ## Schema
 
-API schema is defined in multiple YAML files in ["schemas" directory](../schemas). Note that schema stored here is just a cache for development. Latest schema is located in [contrail-api-client repository](http://github.com/Juniper/contrail-api-client). JSON version of schema is generated [here](../public/schema.json).
+API schema is defined in multiple YAML files in ["schemas" directory](../schemas). Note that schema stored here is just a cache for development. Latest schema is located in [contrail-api-client repository](http://github.com/tungstenfabric-preview/api-client). JSON version of schema is generated [here](../public/schema.json).
 
 Schema has following properties:
 
@@ -193,7 +193,7 @@ API Server provides REST API and gRPC API for external orchestrators such as UI,
 
 API Server supports Keystone V3 authentication and RBAC.
 
-API Server has minimal embedded Keystone API V3 support for testing purposes. See "keystone" key [in sample configuration file](https://github.com/Juniper/contrail/blob/master/sample/contrail.yml).
+API Server has minimal embedded Keystone API V3 support for testing purposes. See "keystone" key [in sample configuration file](https://github.com/tungstenfabric-preview/intent-service/blob/master/sample/contrail.yml).
 
 See:
  

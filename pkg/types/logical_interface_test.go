@@ -9,10 +9,10 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 
-	"github.com/Juniper/contrail/pkg/errutil"
-	"github.com/Juniper/contrail/pkg/models"
-	"github.com/Juniper/contrail/pkg/services"
-	servicesmock "github.com/Juniper/contrail/pkg/services/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	servicesmock "github.com/tungstenfabric-preview/intent-service/pkg/services/mock"
 )
 
 func logicalInterfaceNextServMocks(t *testing.T, service *ContrailTypeLogicService) {

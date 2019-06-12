@@ -8,7 +8,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/twinj/uuid"
 
-	"github.com/Juniper/contrail/pkg/errutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
 )
 
 // IPAM subnet methods.

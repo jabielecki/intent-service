@@ -5,16 +5,16 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/Juniper/contrail/pkg/format"
-	"github.com/Juniper/contrail/pkg/models/basemodels"
-	"github.com/Juniper/contrail/pkg/services/mock"
+	"github.com/tungstenfabric-preview/intent-service/pkg/format"
+	"github.com/tungstenfabric-preview/intent-service/pkg/models/basemodels"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services/mock"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Juniper/contrail/pkg/fileutil"
-	"github.com/Juniper/contrail/pkg/services"
-	"github.com/Juniper/contrail/pkg/services/baseservices"
+	"github.com/tungstenfabric-preview/intent-service/pkg/fileutil"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services"
+	"github.com/tungstenfabric-preview/intent-service/pkg/services/baseservices"
 )
 
 const (

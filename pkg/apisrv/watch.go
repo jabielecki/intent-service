@@ -6,8 +6,8 @@ import (
 	"github.com/labstack/echo"
 	"golang.org/x/net/websocket"
 
-	auth2 "github.com/Juniper/contrail/pkg/auth"
-	"github.com/Juniper/contrail/pkg/errutil"
+	auth2 "github.com/tungstenfabric-preview/intent-service/pkg/auth"
+	"github.com/tungstenfabric-preview/intent-service/pkg/errutil"
 )
 
 func (s *Server) watchHandler(c echo.Context) error {

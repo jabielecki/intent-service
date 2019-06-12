@@ -16,7 +16,7 @@ func TestToACLRules(t *testing.T) {
 	}{
 		{
 			// Behave properly, unlike
-			// https://github.com/Juniper/contrail-controller/blob/be4053c84/src/config/schema-transformer/config_db.py#L2030
+			// https://github.com/tungstenfabric-preview/controller/blob/be4053c84/src/config/schema-transformer/config_db.py#L2030
 			name: "Non-local destination address after a local destination address",
 			policyRules: &PolicyRulesWithRefs{
 				Rules: []*PolicyRuleType{
@@ -94,7 +94,7 @@ func TestToACLRules(t *testing.T) {
 
 		{
 			// Behave properly, unlike
-			// https://github.com/Juniper/contrail-controller/blob/be4053c84/src/config/schema-transformer/config_db.py#L2030
+			// https://github.com/tungstenfabric-preview/controller/blob/be4053c84/src/config/schema-transformer/config_db.py#L2030
 			name: "Non-local source & destination addresses after a local source address",
 			policyRules: &PolicyRulesWithRefs{
 				Rules: []*PolicyRuleType{
@@ -140,7 +140,7 @@ func TestToACLRules(t *testing.T) {
 
 		{
 			// Behave properly, unlike
-			// https://github.com/Juniper/contrail-controller/blob/be4053c84/src/config/schema-transformer/config_db.py#L2030
+			// https://github.com/tungstenfabric-preview/controller/blob/be4053c84/src/config/schema-transformer/config_db.py#L2030
 			name: "Non-local source & destination addresses after a local destination address",
 			policyRules: &PolicyRulesWithRefs{
 				Rules: []*PolicyRuleType{
@@ -561,7 +561,7 @@ func TestMakeACLRule(t *testing.T) {
 
 		{
 			// Replicates the logic in
-			// https://github.com/Juniper/contrail-controller/blob/474731ce0/src/config/schema-transformer/config_db.py#L2039
+			// https://github.com/tungstenfabric-preview/controller/blob/474731ce0/src/config/schema-transformer/config_db.py#L2039
 			name: "ActionList with a deny action (should be ignored)",
 			PolicyAddressPair: PolicyAddressPair{
 				PolicyRule: &PolicyRuleType{

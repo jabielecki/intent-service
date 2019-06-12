@@ -55,7 +55,7 @@ func TestIsIngress(t *testing.T) {
 					SecurityGroup: "local",
 				},
 			},
-			// https://github.com/Juniper/contrail-controller/blob/08f2b11d3/src/config/schema-transformer/config_db.py#L2030
+			// https://github.com/tungstenfabric-preview/controller/blob/08f2b11d3/src/config/schema-transformer/config_db.py#L2030
 			isIngress: true,
 		},
 		{

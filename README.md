@@ -27,21 +27,21 @@ to community discussion.
 ### Step2. Go get Contrail
 
 ```bash
-go get -u github.com/Juniper/contrail
+go get -u github.com/tungstenfabric-preview/intent-service
 ```
 
-Note that `go get -u github.com/Juniper/contrail/cmd/contrailutil` fails because we don't
+Note that `go get -u github.com/tungstenfabric-preview/intent-service/cmd/contrailutil` fails because we don't
 commit generated code.
 
 ### Step3. Install dependencies
 
 ```bash
 # move to repo
-cd $HOME/go/src/github.com/Juniper/contrail
+cd $HOME/go/src/github.com/tungstenfabric-preview/intent-service
 # make sure put GOBIN to path
 export PATH=$PATH:$HOME/go/bin
 # or if you defined GOPATH
-# cd $GOPATH/src/github.com/Juniper/contrail
+# cd $GOPATH/src/github.com/tungstenfabric-preview/intent-service
 make deps
 ```
 
